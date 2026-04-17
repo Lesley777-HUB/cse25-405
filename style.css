@@ -1,0 +1,143 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+ 
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #111;
+    color: white;
+}
+
+ 
+
+header h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+ 
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+ 
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+ 
+
+nav a:hover {
+    color: #c19a6b;
+}
+
+ 
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+ 
+
+.hero h2 {
+    font-size: 50px;
+}
+
+ 
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+ 
+
+/* PRODUCTS */
+.products {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+ 
+
+.products h2 {
+    margin-bottom: 30px;
+}
+
+ 
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ 
+
+.product-box {
+    width: 200px;
+    height: 200px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+ 
+
+.product-box:hover {
+    transform: scale(1.05);
+    background: #eaeaea;
+}
+
+ 
+
+/* ABOUT */
+.about {
+    padding: 60px 40px;
+    background: #fafafa;
+    text-align: center;
+}
+
+ 
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
