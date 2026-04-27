@@ -2,67 +2,90 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 60px;
     background: #111;
 }
 
 .logo {
-    height: 50px;
+    height: 55px;
 }
 
 nav ul {
     display: flex;
+    gap: 30px;
     list-style: none;
-    gap: 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* HERO */
 .hero {
-    height: 80vh;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 60px;
     color: white;
-    text-align: center;
-    background-size: cover;
 }
 
+.hero h1 {
+    font-size: 60px;
+}
+
+/* SECTIONS */
 .section {
-    padding: 60px;
-    text-align: center;
+    padding: 80px 60px;
 }
 
+.section h2 {
+    margin-bottom: 30px;
+}
+
+/* GRID */
 .grid {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .card {
     width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4f4f4;
 }
 
 .card img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
 }
 
+.card p {
+    padding: 15px;
+    text-align: center;
+}
+
+/* FOOTER */
 footer {
     background: #111;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 25px;
+    margin-top: 50px;
 }
