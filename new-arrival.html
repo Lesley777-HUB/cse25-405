@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Arrivals – Orthodox Western Clothing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-top">Est. 2024</span>
+      <span class="brand-name">Orthodox Western</span>
+      <span class="brand-sub">Clothing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="new-arrivals.html" class="active">New Arrivals</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="nav-icon-btn"><i class="fa fa-search"></i></button>
+      <button class="nav-icon-btn cart-trigger" style="position:relative;">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count" style="position:absolute;top:-6px;right:-8px;background:#C9952A;color:#2C1A0E;font-size:0.55rem;font-family:'Cinzel',serif;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a>
+    <a href="new-arrivals.html">New Arrivals</a><a href="sale.html">Sale</a><a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="page-banner">
+    <h1>New Arrivals</h1>
+    <p>Fresh from the frontier — just landed in our collection.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>New Arrivals</span></div>
+  </div>
+
+  <!-- FEATURED NEW ARRIVAL -->
+  <section style="background:var(--brown-mid);padding:4rem 2rem;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+        <div style="background:var(--brown-dark);height:400px;display:flex;align-items:center;justify-content:center;font-size:8rem;position:relative;border:2px solid var(--gold);">
+          🧥
+          <span style="position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--brown-dark);font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.15em;padding:0.3rem 0.8rem;text-transform:uppercase;font-weight:700;">Just Arrived</span>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:0.8rem;">Featured New Arrival</div>
+          <h2 style="font-size:clamp(1.5rem,3vw,2.5rem);color:var(--cream);margin-bottom:1rem;">The Buckskin Legend Jacket</h2>
+          <p style="color:var(--tan);font-style:italic;margin-bottom:1.5rem;line-height:1.8;">Our most anticipated release of the season. Hand-stitched fringe detailing, premium suede exterior, and a warm sherpa lining — built for those who command the room when they walk in.</p>
+          <div style="font-family:'Cinzel',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1.5rem;">BWP 1,850</div>
+          <button class="btn-primary" onclick="addToCart('Buckskin Legend Jacket', 1850, '🧥')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL NEW ARRIVALS -->
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-divider"><span class="star">✦</span></div>
+      <h2 class="section-title">Latest Drops</h2>
+      <p class="section-subtitle">All products added in the last 30 days</p>
+
+      <div class="filter-tabs" style="justify-content:center;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:0.5rem;">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="men">Men</button>
+        <button class="filter-tab" data-filter="women">Women</button>
+        <button class="filter-tab" data-filter="unisex">Unisex</button>
+      </div>
+
+      <div class="products-grid">
+
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#e8e0d0;">🧥
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Jackets</div>
+            <div class="product-name">Buckskin Legend Jacket</div>
+            <div class="product-price">BWP 1,850</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Buckskin Legend Jacket', 1850, '🧥')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#f5e8e0;">👗
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Dresses</div>
+            <div class="product-name">Canyon Rose Boho Maxi Dress</div>
+            <div class="product-price">BWP 1,150</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Canyon Rose Boho Maxi Dress', 1150, '👗')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="unisex">
+          <div class="product-img" style="background:#f0e8d5;">🤠
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Unisex · Hats</div>
+            <div class="product-name">Midnight Stampede Felt Hat</div>
+            <div class="product-price">BWP 1,020</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Midnight Stampede Felt Hat', 1020, '🤠')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#dde0e8;">👖
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Jeans</div>
+            <div class="product-name">Blackwater Slim Taper Jeans</div>
+            <div class="product-price">BWP 780</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Blackwater Slim Taper Jeans', 780, '👖')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#f2e0d5;">👢
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Boots</div>
+            <div class="product-name">Crimson Sunset Cowgirl Boot</div>
+            <div class="product-price">BWP 1,350</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Crimson Sunset Cowgirl Boot', 1350, '👢')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#e8ddd0;">👕
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Shirts</div>
+            <div class="product-name">Frontier Spirit Embroidered Shirt</div>
+            <div class="product-price">BWP 620</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Frontier Spirit Embroidered Shirt', 620, '👕')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="unisex">
+          <div class="product-img" style="background:#e5e2d5;">🧣
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Unisex · Accessories</div>
+            <div class="product-name">Navajo Woven Scarf</div>
+            <div class="product-price">BWP 320</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Navajo Woven Scarf', 320, '🧣')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#f8e8dc;">👒
+            <span class="product-badge" style="background:var(--gold);color:var(--brown-dark);">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Hats</div>
+            <div class="product-name">Peach Blossom Straw Boater</div>
+            <div class="product-price">BWP 550</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Peach Blossom Straw Boater', 550, '👒')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="section-pad" style="background:var(--brown-mid);text-align:center;">
+    <div class="container-narrow">
+      <h2 class="section-title" style="color:var(--cream);">Never Miss a Drop</h2>
+      <p style="color:var(--tan);font-style:italic;margin-bottom:1rem;">Subscribe to get notified first when new products arrive.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" class="newsletter-input" placeholder="Your email address..." required />
+        <button type="submit" class="newsletter-btn">Notify Me</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Orthodox Western</div>
+        <p>Authentic cowboy fashion for the bold and the free.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="men.html">Men's</a></li><li><a href="women.html">Women's</a></li><li><a href="new-arrivals.html">New Arrivals</a></li><li><a href="sale.html">Sale</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Gaborone, BW</a></li><li><a href="#">✉ info@orthodoxwestern.bw</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Orthodox Western Clothing.</span><span>🤠 Botswana</span></div>
+  </footer>
+
+  <div class="cart-overlay"></div>
+  <aside class="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close">✕</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-amount">BWP 0.00</span></div>
+      <a href="#" class="btn-primary" onclick="showToast('Checkout coming soon!');return false;">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleNewsletter(e) {
+      e.preventDefault();
+      showToast('You\'re on the list! We\'ll notify you first 🤠');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
