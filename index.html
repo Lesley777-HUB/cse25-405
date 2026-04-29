@@ -1,93 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Orthodox</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orthodox Western Clothing – Born for the Range</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
-<header>
-    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="sale-banner">
+    🤠 &nbsp; FREE SHIPPING ON ORDERS OVER BWP 500 &nbsp; | &nbsp; NEW ARRIVALS JUST LANDED &nbsp; 🤠
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-top">Est. 2024</span>
+      <span class="brand-name">Orthodox Western</span>
+      <span class="brand-sub">Clothing</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Search"><i class="fa fa-search"></i></button>
+      <button class="nav-icon-btn cart-trigger" aria-label="Cart" style="position:relative;">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count" style="position:absolute;top:-6px;right:-8px;background:#C9952A;color:#2C1A0E;font-size:0.55rem;font-family:'Cinzel',serif;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="new-arrivals.html">New Arrivals</a>
+    <a href="sale.html">Sale</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-in">Handcrafted Western Heritage</div>
+      <h1 class="hero-title animate-in delay-1">
+        Ride With
+        <em>Style.</em>
+      </h1>
+      <p class="hero-tagline animate-in delay-2">
+        Authentic cowboy fashion crafted for those who live by the range
+      </p>
+      <div class="hero-cta-group animate-in delay-3">
+        <a href="men.html" class="btn-primary">Shop Men</a>
+        <a href="women.html" class="btn-outline">Shop Women</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);text-align:center;color:var(--tan);z-index:2;">
+      <div style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:0.5rem;">Scroll</div>
+      <div style="width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);margin:0 auto;"></div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE STRIP ===== -->
+  <div class="feature-strip">
+    <div class="feature-item"><i class="fa fa-truck"></i> Free Delivery over BWP 500</div>
+    <div class="feature-item"><i class="fa fa-shield-alt"></i> 100% Authentic Quality</div>
+    <div class="feature-item"><i class="fa fa-undo"></i> Easy 30-Day Returns</div>
+    <div class="feature-item"><i class="fa fa-headset"></i> Expert Style Advice</div>
+  </div>
+
+  <!-- ===== FEATURED CATEGORIES ===== -->
+  <section class="section-pad section-cream">
     <div class="container">
-        <img src="logo.png" height="50">
+      <div class="section-divider"><span class="star">✦</span></div>
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle">Discover the full range of western-inspired fashion</p>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-            ☰
-        </button>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
 
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
-                <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-                <li class="nav-item"><a class="nav-link" href="new.html">New Arrivals</a></li>
-                <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+        <a href="men.html#boots" class="cat-card" style="display:block;background:var(--brown-dark);padding:2.5rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(201,149,42,0.2);"
+          onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(44,26,14,0.4)'"
+          onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">🥾</div>
+          <h3 style="font-size:1rem;color:var(--cream);letter-spacing:0.1em;">Boots</h3>
+          <p style="font-size:0.8rem;color:var(--tan);margin-top:0.4rem;font-style:italic;">Handcrafted leather</p>
+        </a>
+
+        <a href="men.html#hats" class="cat-card" style="display:block;background:var(--brown-mid);padding:2.5rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(201,149,42,0.2);"
+          onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(44,26,14,0.4)'"
+          onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">🤠</div>
+          <h3 style="font-size:1rem;color:var(--cream);letter-spacing:0.1em;">Hats</h3>
+          <p style="font-size:0.8rem;color:var(--tan);margin-top:0.4rem;font-style:italic;">Iconic cowboy style</p>
+        </a>
+
+        <a href="men.html#jackets" class="cat-card" style="display:block;background:var(--brown-warm);padding:2.5rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(201,149,42,0.2);"
+          onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(44,26,14,0.4)'"
+          onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">🧥</div>
+          <h3 style="font-size:1rem;color:var(--cream);letter-spacing:0.1em;">Jackets</h3>
+          <p style="font-size:0.8rem;color:var(--tan);margin-top:0.4rem;font-style:italic;">Rugged outerwear</p>
+        </a>
+
+        <a href="men.html#jeans" class="cat-card" style="display:block;background:var(--rust);padding:2.5rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(201,149,42,0.2);"
+          onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(44,26,14,0.4)'"
+          onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">👖</div>
+          <h3 style="font-size:1rem;color:var(--cream);letter-spacing:0.1em;">Jeans</h3>
+          <p style="font-size:0.8rem;color:var(--tan);margin-top:0.4rem;font-style:italic;">Durable denim</p>
+        </a>
+
+        <a href="women.html" class="cat-card" style="display:block;background:var(--charcoal);padding:2.5rem 1.5rem;text-align:center;transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(201,149,42,0.2);"
+          onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(44,26,14,0.4)'"
+          onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">👗</div>
+          <h3 style="font-size:1rem;color:var(--cream);letter-spacing:0.1em;">Dresses</h3>
+          <p style="font-size:0.8rem;color:var(--tan);margin-top:0.4rem;font-style:italic;">Western femininity</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-divider"><span class="star">✦</span></div>
+      <h2 class="section-title">Bestsellers</h2>
+      <p class="section-subtitle">Our most-loved pieces, worn by those who mean it</p>
+
+      <div class="products-grid">
+
+        <div class="product-card" data-category="boots">
+          <div class="product-img">🥾
+            <span class="product-badge">Bestseller</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Boots</div>
+            <div class="product-name">Rancher Classic Leather Boot</div>
+            <div class="product-price">BWP 1,250</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Rancher Classic Leather Boot', 1250, '🥾')">Add to Cart</button>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
-</header>
 
-<!-- HERO -->
-<section class="hero" style="background-image: url('hero.jpg')">
-    <div class="hero-text">
-        <h1>Ride in Style</h1>
-        <p>Premium cowboy clothing crafted for authenticity</p>
-        <button>Shop Now</button>
-    </div>
-</section>
-
-<!-- COLLECTION -->
-<section class="container my-5 text-center">
-    <h2 class="mb-4">Featured Collection</h2>
-
-    <div class="row">
-        <div class="col-md-3">
-            <img src="men.jpg" class="img-fluid">
-            <h5>Men</h5>
+        <div class="product-card" data-category="hats">
+          <div class="product-img">🤠
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Unisex · Hats</div>
+            <div class="product-name">Outlaw Straw Cowboy Hat</div>
+            <div class="product-price">BWP 680</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Outlaw Straw Cowboy Hat', 680, '🤠')">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-3">
-            <img src="women.jpg" class="img-fluid">
-            <h5>Women</h5>
+        <div class="product-card" data-category="jackets">
+          <div class="product-img">🧥</div>
+          <div class="product-info">
+            <div class="product-category">Men · Jackets</div>
+            <div class="product-name">Buffalo Ridge Denim Jacket</div>
+            <div class="product-price">BWP 950</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Buffalo Ridge Denim Jacket', 950, '🧥')">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-3">
-            <img src="hero.jpg" class="img-fluid">
-            <h5>New Arrivals</h5>
+        <div class="product-card" data-category="dresses">
+          <div class="product-img">👗
+            <span class="product-badge">Popular</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Dresses</div>
+            <div class="product-name">Prairie Sunset Midi Dress</div>
+            <div class="product-price">BWP 890</div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Prairie Sunset Midi Dress', 890, '👗')">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-3">
-            <img src="hero.jpg" class="img-fluid">
-            <h5>Sale</h5>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="new-arrivals.html" class="btn-rust">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT STRIP ===== -->
+  <section class="section-pad section-warm">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">🤠</div>
+        <div class="about-text">
+          <div style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;">Our Story</div>
+          <h2>Born in Botswana,<br>Built for the Wild</h2>
+          <p>Orthodox Western Clothing was born from a love of the frontier spirit — rugged, free, and unapologetically bold. We bring authentic cowboy culture to Botswana and beyond.</p>
+          <p>Every piece in our collection is selected with care, built to last, and designed to make you stand out whether you're on the ranch or in the city.</p>
+          <a href="contact.html" class="btn-outline">Get in Touch</a>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- CONTACT STRIP -->
-<section class="contact-strip">
-    <div>
-        <p><b>Call</b></p>
-        <p>+267 75171556</p>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-divider"><span class="star" style="color:var(--gold);">✦</span></div>
+      <h2 class="section-title" style="color:var(--cream);">What Our Riders Say</h2>
+      <p class="section-subtitle">Real people, real western spirit</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">The leather boots I bought are incredibly well-made. I've worn them every day for 6 months and they only look better with time. True quality!</p>
+          <div class="testimonial-author">— Thabo M., Gaborone</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Finally a brand that understands western style in Botswana. The denim jacket fits perfectly and gets compliments everywhere I go.</p>
+          <div class="testimonial-author">— Kefilwe S., Francistown</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">I ordered the Prairie Dress for a rodeo event and it was perfect. Fast delivery, beautiful packaging, and stunning quality.</p>
+          <div class="testimonial-author">— Nomsa D., Maun</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div>
-        <p><b>Email</b></p>
-        <p>lesleystud490@gmail.com</p>
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="section-pad" style="background:var(--brown-mid);text-align:center;">
+    <div class="container-narrow">
+      <div class="section-divider"><span class="star" style="color:var(--gold);">✦</span></div>
+      <h2 class="section-title" style="color:var(--cream);">Join the Herd</h2>
+      <p style="color:var(--tan);font-style:italic;margin-bottom:0;">Get exclusive deals, new arrivals, and western lifestyle inspiration straight to your inbox.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" class="newsletter-input" placeholder="Your email address..." required />
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
     </div>
+  </section>
 
-    <div>
-        <p><b>Location</b></p>
-        <p>Gaborone, Botswana</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Orthodox Western</div>
+        <p>Authentic cowboy fashion for the bold and the free. Serving Botswana and the world with genuine western style since 2024.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="men.html">Men's Collection</a></li>
+          <li><a href="women.html">Women's Collection</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 Gaborone, Botswana</a></li>
+          <li><a href="tel:+2677XXXXXXX">📞 +267 7XX XXXX</a></li>
+          <li><a href="mailto:info@orthodoxwestern.bw">✉ info@orthodoxwestern.bw</a></li>
+        </ul>
+      </div>
     </div>
-</section>
+    <div class="footer-bottom">
+      <span>© 2024 Orthodox Western Clothing. All rights reserved.</span>
+      <span>Made with 🤠 in Botswana</span>
+    </div>
+  </footer>
 
-<footer>
-    <p>© 2026 Orthodox Cowboy Clothing</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close">✕</button>
+    </div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-amount">BWP 0.00</span>
+      </div>
+      <a href="#" class="btn-primary" onclick="showToast('Checkout coming soon!');return false;">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleNewsletter(e) {
+      e.preventDefault();
+      showToast('Thanks for subscribing! Welcome to the herd 🤠');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
