@@ -1,39 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Men's Collection – Orthodox Western Clothing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
-<header>
-<img src="logo.png" class="logo">
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="men.html">Men</a></li>
-<li><a href="women.html">Women</a></li>
-<li><a href="new.html">New Arrivals</a></li>
-<li><a href="sale.html">Sale</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-top">Est. 2024</span>
+      <span class="brand-name">Orthodox Western</span>
+      <span class="brand-sub">Clothing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html" class="active">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="nav-icon-btn" aria-label="Search"><i class="fa fa-search"></i></button>
+      <button class="nav-icon-btn cart-trigger" aria-label="Cart" style="position:relative;">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count" style="position:absolute;top:-6px;right:-8px;background:#C9952A;color:#2C1A0E;font-size:0.55rem;font-family:'Cinzel',serif;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a>
+    <a href="new-arrivals.html">New Arrivals</a><a href="sale.html">Sale</a><a href="contact.html">Contact</a>
+  </nav>
 
-<section class="hero" style="background-image:url('men.jpg')">
-<h1>Men</h1>
-</section>
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <h1>Men's Collection</h1>
+    <p>Rugged. Bold. Unapologetically Western.</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>/</span> <span>Men</span>
+    </div>
+  </div>
 
-<section class="section">
-<div class="grid">
-<div class="card"><img src="men.jpg"><p>Product</p></div>
-</div>
-</section>
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="boots">Boots</button>
+      <button class="filter-tab" data-filter="hats">Hats</button>
+      <button class="filter-tab" data-filter="shirts">Shirts</button>
+      <button class="filter-tab" data-filter="jeans">Jeans</button>
+    </div>
+    <select class="sort-select" onchange="sortProducts(this.value)">
+      <option value="">Sort by</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="name">Name A–Z</option>
+    </select>
+  </div>
 
-<footer>
-<p>© 2026 Orthodox Cowboy Clothing</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- PRODUCTS -->
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+
+      <!-- BOOTS -->
+      <div id="boots" style="margin-bottom:3rem;">
+        <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--brown-dark);letter-spacing:0.15em;text-transform:uppercase;border-bottom:2px solid var(--gold);padding-bottom:0.8rem;margin-bottom:2rem;">
+          🥾 Boots
+        </h3>
+        <div class="products-grid">
+
+          <div class="product-card" data-category="boots" data-price="1250" data-name="Rancher Classic Leather Boot">
+            <div class="product-img" style="background:#f0e6d3;">🥾<span class="product-badge">Bestseller</span></div>
+            <div class="product-info">
+              <div class="product-category">Men · Boots</div>
+              <div class="product-name">Rancher Classic Leather Boot</div>
+              <div class="product-price">BWP 1,250</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Rancher Classic Leather Boot', 1250, '🥾')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="boots" data-price="1480" data-name="Longhorn Embroidered Boot">
+            <div class="product-img" style="background:#e8d9c0;">👢</div>
+            <div class="product-info">
+              <div class="product-category">Men · Boots</div>
+              <div class="product-name">Longhorn Embroidered Boot</div>
+              <div class="product-price">BWP 1,480</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Longhorn Embroidered Boot', 1480, '👢')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="boots" data-price="980" data-name="Trail Dust Suede Boot">
+            <div class="product-img" style="background:#ddd0b8;">🥾</div>
+            <div class="product-info">
+              <div class="product-category">Men · Boots</div>
+              <div class="product-name">Trail Dust Suede Boot</div>
+              <div class="product-price">BWP 980</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Trail Dust Suede Boot', 980, '🥾')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- HATS -->
+      <div id="hats" style="margin-bottom:3rem;">
+        <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--brown-dark);letter-spacing:0.15em;text-transform:uppercase;border-bottom:2px solid var(--gold);padding-bottom:0.8rem;margin-bottom:2rem;">
+          🤠 Hats
+        </h3>
+        <div class="products-grid">
+
+          <div class="product-card" data-category="hats" data-price="680" data-name="Outlaw Straw Cowboy Hat">
+            <div class="product-img" style="background:#f5edd8;">🤠<span class="product-badge">New</span></div>
+            <div class="product-info">
+              <div class="product-category">Men · Hats</div>
+              <div class="product-name">Outlaw Straw Cowboy Hat</div>
+              <div class="product-price">BWP 680</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Outlaw Straw Cowboy Hat', 680, '🤠')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="hats" data-price="920" data-name="Frontier Felt Hat – Black">
+            <div class="product-img" style="background:#e0d5c5;">🎩</div>
+            <div class="product-info">
+              <div class="product-category">Men · Hats</div>
+              <div class="product-name">Frontier Felt Hat – Black</div>
+              <div class="product-price">BWP 920</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Frontier Felt Hat – Black', 920, '🎩')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="hats" data-price="540" data-name="Sundowner Straw Hat – Natural">
+            <div class="product-img" style="background:#f2e8d4;">👒</div>
+            <div class="product-info">
+              <div class="product-category">Men · Hats</div>
+              <div class="product-name">Sundowner Straw Hat – Natural</div>
+              <div class="product-price">BWP 540</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Sundowner Straw Hat – Natural', 540, '👒')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SHIRTS -->
+      <div id="shirts" style="margin-bottom:3rem;">
+        <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--brown-dark);letter-spacing:0.15em;text-transform:uppercase;border-bottom:2px solid var(--gold);padding-bottom:0.8rem;margin-bottom:2rem;">
+          👕 Shirts
+        </h3>
+        <div class="products-grid">
+
+          <div class="product-card" data-category="shirts" data-price="480" data-name="Rodeo Plaid Flannel Shirt">
+            <div class="product-img" style="background:#e8ddd0;">👕<span class="product-badge">Popular</span></div>
+            <div class="product-info">
+              <div class="product-category">Men · Shirts</div>
+              <div class="product-name">Rodeo Plaid Flannel Shirt</div>
+              <div class="product-price">BWP 480</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Rodeo Plaid Flannel Shirt', 480, '👕')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="shirts" data-price="420" data-name="Desert Wind Snap Button Shirt">
+            <div class="product-img" style="background:#ddd5c5;">👔</div>
+            <div class="product-info">
+              <div class="product-category">Men · Shirts</div>
+              <div class="product-name">Desert Wind Snap Button Shirt</div>
+              <div class="product-price">BWP 420</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Desert Wind Snap Button Shirt', 420, '👔')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="shirts" data-price="560" data-name="Cattleman Embroidered Western Shirt">
+            <div class="product-img" style="background:#f0e4ce;">👕</div>
+            <div class="product-info">
+              <div class="product-category">Men · Shirts</div>
+              <div class="product-name">Cattleman Embroidered Western Shirt</div>
+              <div class="product-price">BWP 560</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Cattleman Embroidered Western Shirt', 560, '👕')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- JEANS -->
+      <div id="jeans">
+        <h3 style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--brown-dark);letter-spacing:0.15em;text-transform:uppercase;border-bottom:2px solid var(--gold);padding-bottom:0.8rem;margin-bottom:2rem;">
+          👖 Jeans
+        </h3>
+        <div class="products-grid">
+
+          <div class="product-card" data-category="jeans" data-price="650" data-name="Roughrider Straight-Leg Jeans">
+            <div class="product-img" style="background:#d8dde8;">👖</div>
+            <div class="product-info">
+              <div class="product-category">Men · Jeans</div>
+              <div class="product-name">Roughrider Straight-Leg Jeans</div>
+              <div class="product-price">BWP 650</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Roughrider Straight-Leg Jeans', 650, '👖')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="jeans" data-price="720" data-name="Dusty Trail Bootcut Jeans">
+            <div class="product-img" style="background:#cdd4e0;">👖<span class="product-badge">Bestseller</span></div>
+            <div class="product-info">
+              <div class="product-category">Men · Jeans</div>
+              <div class="product-name">Dusty Trail Bootcut Jeans</div>
+              <div class="product-price">BWP 720</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Dusty Trail Bootcut Jeans', 720, '👖')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="jeans" data-price="590" data-name="Range Rider Relaxed Jeans">
+            <div class="product-img" style="background:#c8d0de;">👖</div>
+            <div class="product-info">
+              <div class="product-category">Men · Jeans</div>
+              <div class="product-name">Range Rider Relaxed Jeans</div>
+              <div class="product-price">BWP 590</div>
+              <div class="product-actions">
+                <button class="btn-primary" onclick="addToCart('Range Rider Relaxed Jeans', 590, '👖')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Orthodox Western</div>
+        <p>Authentic cowboy fashion for the bold and the free. Serving Botswana and the world.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="men.html">Men's Collection</a></li>
+          <li><a href="women.html">Women's Collection</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 Gaborone, Botswana</a></li>
+          <li><a href="#">📞 +267 7XX XXXX</a></li>
+          <li><a href="#">✉ info@orthodoxwestern.bw</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Orthodox Western Clothing. All rights reserved.</span>
+      <span>Made with 🤠 in Botswana</span>
+    </div>
+  </footer>
+
+  <!-- CART -->
+  <div class="cart-overlay"></div>
+  <aside class="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close">✕</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-amount">BWP 0.00</span></div>
+      <a href="#" class="btn-primary" onclick="showToast('Checkout coming soon!');return false;">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    function sortProducts(value) {
+      const grids = document.querySelectorAll('.products-grid');
+      grids.forEach(grid => {
+        const cards = [...grid.querySelectorAll('.product-card')];
+        if (value === 'price-low') cards.sort((a,b) => +a.dataset.price - +b.dataset.price);
+        if (value === 'price-high') cards.sort((a,b) => +b.dataset.price - +a.dataset.price);
+        if (value === 'name') cards.sort((a,b) => a.dataset.name.localeCompare(b.dataset.name));
+        cards.forEach(c => grid.appendChild(c));
+      });
+    }
+  </script>
 </body>
 </html>
