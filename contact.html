@@ -1,45 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Orthodox Western Clothing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
-<header>
-<img src="logo.png" class="logo">
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="men.html">Men</a></li>
-<li><a href="women.html">Women</a></li>
-<li><a href="new.html">New Arrivals</a></li>
-<li><a href="sale.html">Sale</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-top">Est. 2024</span>
+      <span class="brand-name">Orthodox Western</span>
+      <span class="brand-sub">Clothing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="sale.html">Sale</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="nav-icon-btn"><i class="fa fa-search"></i></button>
+      <button class="nav-icon-btn cart-trigger" style="position:relative;">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count" style="position:absolute;top:-6px;right:-8px;background:#C9952A;color:#2C1A0E;font-size:0.55rem;font-family:'Cinzel',serif;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a>
+    <a href="new-arrivals.html">New Arrivals</a><a href="sale.html">Sale</a><a href="contact.html">Contact</a>
+  </nav>
 
-<section class="section">
-<h1>Contact Us</h1>
+  <div class="page-banner">
+    <h1>Get in Touch</h1>
+    <p>We'd love to hear from you — questions, feedback, or just saying howdy.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Contact</span></div>
+  </div>
 
-<p>Phone: +267 75171556</p>
-<p>Email: lesleystud490@gmail.com</p>
-<p>Location: Gaborone, Botswana</p>
+  <!-- CONTACT SECTION -->
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;">
 
-<form>
-<input type="text" placeholder="Name" required><br><br>
-<input type="email" placeholder="Email" required><br><br>
-<textarea placeholder="Message" required></textarea><br><br>
-<button>Send</button>
-</form>
+        <!-- INFO COLUMN -->
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:0.8rem;">Reach Us</div>
+          <h2 style="font-size:1.8rem;color:var(--brown-dark);margin-bottom:1.5rem;">We're Here<br>for You, Partner</h2>
+          <p style="color:var(--text-light);margin-bottom:2.5rem;line-height:1.8;">Whether you have a question about sizing, want to know if a product is in stock, or just want to share your western story — we're always happy to help.</p>
 
-</section>
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-<footer>
-<p>© 2026 Orthodox Cowboy Clothing</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:var(--brown-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--gold);">
+                <i class="fa fa-map-marker-alt" style="color:var(--gold);"></i>
+              </div>
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown-dark);margin-bottom:0.3rem;">Our Location</div>
+                <div style="color:var(--text-light);font-size:0.9rem;line-height:1.6;">Plot 5472, Main Mall<br>Gaborone, Botswana</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:var(--brown-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--gold);">
+                <i class="fa fa-phone" style="color:var(--gold);"></i>
+              </div>
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown-dark);margin-bottom:0.3rem;">Phone</div>
+                <div style="color:var(--text-light);font-size:0.9rem;">+267 7XX XXXX</div>
+                <div style="color:var(--text-light);font-size:0.8rem;font-style:italic;margin-top:0.2rem;">Mon–Sat, 8am – 6pm</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:var(--brown-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--gold);">
+                <i class="fa fa-envelope" style="color:var(--gold);"></i>
+              </div>
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown-dark);margin-bottom:0.3rem;">Email</div>
+                <div style="color:var(--text-light);font-size:0.9rem;">info@orthodoxwestern.bw</div>
+                <div style="color:var(--text-light);font-size:0.8rem;font-style:italic;margin-top:0.2rem;">We reply within 24 hours</div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1.2rem;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:var(--brown-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--gold);">
+                <i class="fa fa-clock" style="color:var(--gold);"></i>
+              </div>
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown-dark);margin-bottom:0.3rem;">Store Hours</div>
+                <div style="color:var(--text-light);font-size:0.9rem;line-height:1.6;">
+                  Monday – Friday: 8:00 – 18:00<br>
+                  Saturday: 9:00 – 16:00<br>
+                  Sunday: Closed
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SOCIAL -->
+          <div style="margin-top:2.5rem;">
+            <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown-dark);margin-bottom:1rem;">Follow the Trail</div>
+            <div style="display:flex;gap:0.8rem;">
+              <a href="#" style="width:40px;height:40px;border:1px solid var(--tan);display:flex;align-items:center;justify-content:center;color:var(--brown-mid);font-size:1rem;transition:all 0.3s;"
+                onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--tan)';this.style.color='var(--brown-mid)'">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" style="width:40px;height:40px;border:1px solid var(--tan);display:flex;align-items:center;justify-content:center;color:var(--brown-mid);font-size:1rem;transition:all 0.3s;"
+                onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--tan)';this.style.color='var(--brown-mid)'">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" style="width:40px;height:40px;border:1px solid var(--tan);display:flex;align-items:center;justify-content:center;color:var(--brown-mid);font-size:1rem;transition:all 0.3s;"
+                onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--tan)';this.style.color='var(--brown-mid)'">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="#" style="width:40px;height:40px;border:1px solid var(--tan);display:flex;align-items:center;justify-content:center;color:var(--brown-mid);font-size:1rem;transition:all 0.3s;"
+                onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+                onmouseout="this.style.borderColor='var(--tan)';this.style.color='var(--brown-mid)'">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM COLUMN -->
+        <div>
+          <div class="contact-form">
+            <div style="margin-bottom:2rem;">
+              <div style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Send a Message</div>
+              <h3 style="font-size:1.5rem;color:var(--brown-dark);">We Love Hearing From Our Community</h3>
+            </div>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="firstName">First Name *</label>
+                  <input type="text" id="firstName" class="form-input" placeholder="e.g. Thabo" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" class="form-input" placeholder="e.g. Mokoena" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" class="form-input" placeholder="your@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+267 7XX XXXX" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject *</label>
+                <select id="subject" class="form-select" required>
+                  <option value="">— Select a topic —</option>
+                  <option value="order">Order Enquiry</option>
+                  <option value="product">Product Question</option>
+                  <option value="return">Return / Exchange</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="wholesale">Wholesale / Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message *</label>
+                <textarea id="message" class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
+              </div>
+
+              <!-- Rating / Feedback -->
+              <div class="form-group">
+                <label class="form-label">How would you rate your experience with us?</label>
+                <div id="starRating" style="display:flex;gap:0.5rem;font-size:1.8rem;cursor:pointer;">
+                  <span data-val="1" style="color:var(--tan);transition:color 0.2s;">★</span>
+                  <span data-val="2" style="color:var(--tan);transition:color 0.2s;">★</span>
+                  <span data-val="3" style="color:var(--tan);transition:color 0.2s;">★</span>
+                  <span data-val="4" style="color:var(--tan);transition:color 0.2s;">★</span>
+                  <span data-val="5" style="color:var(--tan);transition:color 0.2s;">★</span>
+                </div>
+                <input type="hidden" id="ratingValue" value="0" />
+              </div>
+
+              <div class="form-group" style="display:flex;align-items:center;gap:0.8rem;">
+                <input type="checkbox" id="newsletter" style="width:16px;height:16px;accent-color:var(--brown-dark);" />
+                <label for="newsletter" style="font-size:0.85rem;color:var(--text-light);cursor:pointer;">Subscribe me to the Orthodox Western newsletter</label>
+              </div>
+
+              <button type="submit" class="btn-primary submit-btn" style="width:100%;padding:1.1rem;font-size:0.82rem;letter-spacing:0.2em;margin-top:0.5rem;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER -->
+  <div style="background:var(--brown-dark);height:280px;display:flex;align-items:center;justify-content:center;border-top:2px solid var(--gold);">
+    <div style="text-align:center;">
+      <div style="font-size:3rem;margin-bottom:1rem;">📍</div>
+      <div style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;">Find Us in Gaborone, Botswana</div>
+      <div style="color:var(--tan);font-style:italic;margin-top:0.5rem;font-size:0.9rem;">Main Mall, Plot 5472 — Open Monday to Saturday</div>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <section class="section-pad section-cream">
+    <div class="container-narrow">
+      <div class="section-divider"><span class="star">✦</span></div>
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-subtitle">Quick answers before you reach out</p>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+
+        <details style="border:1px solid rgba(196,168,130,0.4);padding:1.2rem 1.5rem;background:#fff;">
+          <summary style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;color:var(--brown-dark);font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Do you ship to other countries?
+            <span style="color:var(--gold);">+</span>
+          </summary>
+          <p style="margin-top:1rem;color:var(--text-light);font-size:0.9rem;line-height:1.7;">Yes! We ship internationally. Shipping times and costs vary by destination. Orders within Botswana typically arrive within 2–4 business days.</p>
+        </details>
+
+        <details style="border:1px solid rgba(196,168,130,0.4);padding:1.2rem 1.5rem;background:#fff;">
+          <summary style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;color:var(--brown-dark);font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            What is your return policy?
+            <span style="color:var(--gold);">+</span>
+          </summary>
+          <p style="margin-top:1rem;color:var(--text-light);font-size:0.9rem;line-height:1.7;">We offer 30-day returns on all full-price items in original condition. Sale items are final sale. Contact us to start a return.</p>
+        </details>
+
+        <details style="border:1px solid rgba(196,168,130,0.4);padding:1.2rem 1.5rem;background:#fff;">
+          <summary style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;color:var(--brown-dark);font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            How do I know what size to order?
+            <span style="color:var(--gold);">+</span>
+          </summary>
+          <p style="margin-top:1rem;color:var(--text-light);font-size:0.9rem;line-height:1.7;">Each product page includes a detailed size guide. If you're between sizes, we recommend sizing up for a comfortable western fit. You can also contact us for personalized advice.</p>
+        </details>
+
+        <details style="border:1px solid rgba(196,168,130,0.4);padding:1.2rem 1.5rem;background:#fff;">
+          <summary style="font-family:'Cinzel',serif;font-size:0.85rem;letter-spacing:0.08em;cursor:pointer;color:var(--brown-dark);font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            Are your leather products genuine?
+            <span style="color:var(--gold);">+</span>
+          </summary>
+          <p style="margin-top:1rem;color:var(--text-light);font-size:0.9rem;line-height:1.7;">Absolutely. All leather products are crafted from genuine leather. We source responsibly and prioritize durability and quality above all.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Orthodox Western</div>
+        <p>Authentic cowboy fashion for the bold and the free.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="men.html">Men's</a></li><li><a href="women.html">Women's</a></li><li><a href="new-arrivals.html">New Arrivals</a></li><li><a href="sale.html">Sale</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Gaborone, BW</a></li><li><a href="#">✉ info@orthodoxwestern.bw</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Orthodox Western Clothing.</span><span>🤠 Botswana</span></div>
+  </footer>
+
+  <div class="cart-overlay"></div>
+  <aside class="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close">✕</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-amount">BWP 0.00</span></div>
+      <a href="#" class="btn-primary" onclick="showToast('Checkout coming soon!');return false;">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Star rating interaction
+    const stars = document.querySelectorAll('#starRating span');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        const val = +star.dataset.val;
+        stars.forEach((s, i) => {
+          s.style.color = i < val ? '#C9952A' : '#C4A882';
+        });
+      });
+      star.addEventListener('mouseout', () => {
+        stars.forEach((s, i) => {
+          s.style.color = i < selectedRating ? '#C9952A' : '#C4A882';
+        });
+      });
+      star.addEventListener('click', () => {
+        selectedRating = +star.dataset.val;
+        document.getElementById('ratingValue').value = selectedRating;
+        stars.forEach((s, i) => {
+          s.style.color = i < selectedRating ? '#C9952A' : '#C4A882';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
