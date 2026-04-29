@@ -1,34 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sale – Orthodox Western Clothing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
-
-<header>
-<img src="logo.png" class="logo">
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="men.html">Men</a></li>
-<li><a href="women.html">Women</a></li>
-<li><a href="new.html">New Arrivals</a></li>
-<li><a href="sale.html">Sale</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
-
-<section class="section">
-<h1>Sale</h1>
-</section>
-
-<footer>
-<p>© 2026 Orthodox Cowboy Clothing</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-top">Est. 2024</span>
+      <span class="brand-name">Orthodox Western</span>
+      <span class="brand-sub">Clothing</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="sale.html" class="active">Sale</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button class="nav-icon-btn"><i class="fa fa-search"></i></button>
+      <button class="nav-icon-btn cart-trigger" style="position:relative;">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="cart-count" style="position:absolute;top:-6px;right:-8px;background:#C9952A;color:#2C1A0E;font-size:0.55rem;font-family:'Cinzel',serif;font-weight:700;width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;">0</span>
+      </button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a>
+    <a href="new-arrivals.html">New Arrivals</a><a href="sale.html">Sale</a><a href="contact.html">Contact</a>
+  </nav>
+ 
+  <!-- SALE HERO -->
+  <div class="sale-hero">
+    <div style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;">Limited Time Only</div>
+    <h1 style="font-family:'Cinzel',serif;font-size:clamp(2.5rem,7vw,5rem);color:var(--cream);font-weight:900;line-height:1;">The Grand
+      <span style="color:var(--gold);display:block;">Round-Up Sale</span>
+    </h1>
+    <p style="color:var(--tan);font-style:italic;font-size:1.1rem;margin:1rem 0;">Up to 50% off selected western essentials</p>
+ 
+    <!-- COUNTDOWN -->
+    <div class="sale-countdown">
+      <div class="countdown-unit">
+        <span class="countdown-number">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number">00</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-number">00</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- SALE PRODUCTS -->
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-divider"><span class="star">✦</span></div>
+      <h2 class="section-title">Sale Items</h2>
+      <p class="section-subtitle">Grab them before they're gone — these deals won't last</p>
+ 
+      <div class="filter-tabs" style="justify-content:center;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:0.5rem;">
+        <button class="filter-tab active" data-filter="all">All Sale</button>
+        <button class="filter-tab" data-filter="men">Men</button>
+        <button class="filter-tab" data-filter="women">Women</button>
+      </div>
+ 
+      <div class="products-grid">
+ 
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#e8e0d0;">🥾
+            <span class="product-badge" style="background:var(--rust);">-30%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Boots</div>
+            <div class="product-name">Rancher Classic Leather Boot</div>
+            <div class="product-price">
+              <span class="old-price">BWP 1,250</span> BWP 875
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Rancher Classic Leather Boot (Sale)', 875, '🥾')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#f8dfd0;">👗
+            <span class="product-badge" style="background:var(--rust);">-25%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Dresses</div>
+            <div class="product-name">Prairie Sunset Midi Dress</div>
+            <div class="product-price">
+              <span class="old-price">BWP 890</span> BWP 668
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Prairie Sunset Midi Dress (Sale)', 668, '👗')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#e8ddd0;">👔
+            <span class="product-badge" style="background:var(--rust);">-40%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Shirts</div>
+            <div class="product-name">Desert Wind Snap Button Shirt</div>
+            <div class="product-price">
+              <span class="old-price">BWP 420</span> BWP 252
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Desert Wind Snap Button Shirt (Sale)', 252, '👔')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#fce8d8;">🌺
+            <span class="product-badge" style="background:var(--rust);">-35%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Dresses</div>
+            <div class="product-name">Campfire Floral Sundress</div>
+            <div class="product-price">
+              <span class="old-price">BWP 750</span> BWP 488
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Campfire Floral Sundress (Sale)', 488, '🌺')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#f0e8d5;">🤠
+            <span class="product-badge" style="background:var(--rust);">-20%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Hats</div>
+            <div class="product-name">Frontier Felt Hat – Black</div>
+            <div class="product-price">
+              <span class="old-price">BWP 920</span> BWP 736
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Frontier Felt Hat – Black (Sale)', 736, '🤠')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#eeddd4;">🥾
+            <span class="product-badge" style="background:var(--rust);">-50%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Boots</div>
+            <div class="product-name">Prairie Moon Leather Boot</div>
+            <div class="product-price">
+              <span class="old-price">BWP 980</span> BWP 490
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Prairie Moon Leather Boot (Sale)', 490, '🥾')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="men">
+          <div class="product-img" style="background:#cdd4e0;">👖
+            <span class="product-badge" style="background:var(--rust);">-30%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men · Jeans</div>
+            <div class="product-name">Dusty Trail Bootcut Jeans</div>
+            <div class="product-price">
+              <span class="old-price">BWP 720</span> BWP 504
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Dusty Trail Bootcut Jeans (Sale)', 504, '👖')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product-card" data-category="women">
+          <div class="product-img" style="background:#f8edde;">🤠
+            <span class="product-badge" style="background:var(--rust);">-25%</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women · Hats</div>
+            <div class="product-name">Blossom Felt Cowgirl Hat</div>
+            <div class="product-price">
+              <span class="old-price">BWP 620</span> BWP 465
+            </div>
+            <div class="product-actions">
+              <button class="btn-primary" onclick="addToCart('Blossom Felt Cowgirl Hat (Sale)', 465, '🤠')">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SALE TERMS -->
+  <section style="background:var(--cream);padding:2rem;">
+    <div class="container-narrow" style="text-align:center;">
+      <p style="color:var(--text-light);font-size:0.82rem;font-style:italic;">
+        *Sale prices are valid while stocks last. Discounts applied at checkout. Cannot be combined with other offers. All sale items are final sale — no returns or exchanges.
+      </p>
+    </div>
+  </section>
+ 
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">Orthodox Western</div>
+        <p>Authentic cowboy fashion for the bold and the free.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="men.html">Men's</a></li><li><a href="women.html">Women's</a></li><li><a href="new-arrivals.html">New Arrivals</a></li><li><a href="sale.html">Sale</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="#">📍 Gaborone, BW</a></li><li><a href="#">✉ info@orthodoxwestern.bw</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Orthodox Western Clothing.</span><span>🤠 Botswana</span></div>
+  </footer>
+ 
+  <div class="cart-overlay"></div>
+  <aside class="cart-sidebar">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close">✕</button></div>
+    <div class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-amount">BWP 0.00</span></div>
+      <a href="#" class="btn-primary" onclick="showToast('Checkout coming soon!');return false;">Proceed to Checkout</a>
+    </div>
+  </aside>
+ 
+  <script src="js/main.js"></script>
 </body>
 </html>
+ 
