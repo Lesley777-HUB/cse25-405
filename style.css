@@ -481,6 +481,7 @@ button {
     .row {
         flex-direction: column;
     }
+}
     .western-title {
     font-family: 'Rye', cursive;
     color: #3b2a1a;
