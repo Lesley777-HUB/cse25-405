@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cart - Orthodox Cowboy Clothing</title>
+<title>Checkout - Orthodox Cowboy Clothing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
         <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="new-arrivals.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
@@ -50,17 +50,79 @@
   </div>
 </nav>
 
-<!-- CART SECTION -->
+<!-- CHECKOUT SECTION -->
 <section class="container py-5">
-  <h1 class="text-center western-title mb-4">YOUR CART</h1>
+  <h1 class="text-center western-title mb-4">CHECKOUT</h1>
 
-  <div id="cart-items"></div>
+  <div class="row g-4">
 
-  <div class="card shadow-sm mt-4">
-    <div class="card-body text-end">
-      <h3>Total: P<span id="cart-total">0.00</span></h3>
-      <a href="checkout.html" class="btn btn-dark btn-lg mt-3" id="checkout-btn">Proceed to Checkout</a>
+    <!-- CUSTOMER FORM -->
+    <div class="col-md-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="mb-3">Customer Details</h4>
+
+          <form id="checkout-form">
+
+            <div class="mb-3">
+              <label for="customer-name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="customer-name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="customer-email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="customer-email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="customer-phone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="customer-phone" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="customer-address" class="form-label">Delivery Address</label>
+              <textarea class="form-control" id="customer-address" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="payment-method" class="form-label">Payment Method</label>
+              <select class="form-select" id="payment-method" required>
+                <option value="">Choose payment method</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="Card on Delivery">Card on Delivery</option>
+                <option value="Mobile Payment">Mobile Payment</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-lg w-100">
+              Place Order
+            </button>
+
+          </form>
+
+          <div id="order-success" class="alert alert-success mt-4 d-none">
+            Your order has been placed successfully. Thank you for shopping with Orthodox Cowboy Clothing.
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="col-md-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="mb-3">Order Summary</h4>
+
+          <div id="checkout-summary"></div>
+
+          <hr>
+
+          <h4>Total: P<span id="checkout-total">0.00</span></h4>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -76,7 +138,7 @@
 
     <div>
       <h4>More</h4>
-      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="new-arrival.html">New Arrivals</a>
       <a href="sale.html">Sale</a>
       <a href="contact.html">Contact</a>
     </div>
