@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Women - Orthodox</title>
+
+<title>Women - Orthodox Cowboy Clothing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,17 +13,20 @@
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
-    <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
-    <div>★ MADE FOR THE WESTERN SPIRIT</div>
+  <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
+  <div>★ MADE FOR THE WESTERN SPIRIT</div>
 </div>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <a class="navbar-brand" href="index.html">
       <img src="images/logo.png" alt="Orthodox Logo" height="55">
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -30,10 +34,11 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
-        <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="new-arrivals.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link active" href="women.html">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
         <li class="nav-item">
           <a class="btn btn-dark position-relative" href="cart.html">
             🛒 Cart
@@ -44,197 +49,205 @@
     </div>
   </div>
 </nav>
-<!-- HERO -->
-<div class="hero">
-    <img src="images/women-hero.jpg" class="hero-img">
 
-    <div class="hero-overlay">
-        <h1>WOMEN</h1>
-        <p>Timeless western style for women.<br>
-        Crafted for confidence. Made to last.</p>
-        <button>SHOP NOW</button>
-    </div>
-</div>
+<!-- PAGE HEADER -->
+<section class="container py-5 text-center">
+  <h1 class="western-title">WOMEN'S COLLECTION</h1>
+  <p class="text-muted">Western-inspired fashion for bold and stylish women.</p>
+</section>
 
-<!-- MAIN -->
-<div class="main">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h4>CATEGORIES</h4>
-        <ul>
-            <li>All Women</li>
-            <li>Tops</li>
-            <li>Shirts</li>
-            <li>Jackets</li>
-            <li>Jeans</li>
-            <li>Dresses</li>
-            <li>Accessories</li>
-        </ul>
-
-        <br>
-
-        <h4>SIZE</h4>
-        <ul>
-            <li>XS</li><li>S</li><li>M</li><li>L</li><li>XL</li>
-        </ul>
-
-        <br>
-
-        <h4>COLOR</h4>
-        <ul>
-            <li>Black</li><li>Brown</li><li>Blue</li>
-        </ul>
+<!-- FILTER BAR -->
+<section class="container mb-4">
+  <div class="filter-bar bg-white shadow-sm rounded p-3">
+    <div>
+      <strong>Showing:</strong> Women Products
     </div>
 
-    <!-- PRODUCTS -->
-    <div class="products">
+    <div>
+      <select class="form-select">
+        <option>Sort by: Featured</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Newest</option>
+      </select>
+    </div>
+  </div>
+</section>
 
-        <div class="top-row">
-            <p>Showing 1–12 of 48 products</p>
-            <p>Sort by: Featured</p>
-        </div>
-      <div class="grid">
+<!-- WOMEN PRODUCTS -->
+<section class="container pb-5">
+  <div class="row g-4">
 
-    <div class="card">
-        <img src="images/w1.jpg" alt="Suede Fringe Jacket">
-        <h4>SUEDE FRINGE JACKET</h4>
-        <p>P999.00</p>
+    <!-- PRODUCT 1 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w1.jpg" class="card-img-top product-img" alt="Suede Fringe Jacket">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">SUEDE FRINGE JACKET</h5>
+          <p class="card-text">P999.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="Suede Fringe Jacket"
             data-price="999"
             data-image="images/w1.jpg">
             Add to Cart
-        </button>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-        <img src="images/w2.jpg" alt="Embroidered Blouse">
-        <h4>EMBROIDERED BLOUSE</h4>
-        <p>P999.00</p>
+    <!-- PRODUCT 2 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w2.jpg" class="card-img-top product-img" alt="Embroidered Blouse">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">EMBROIDERED BLOUSE</h5>
+          <p class="card-text">P899.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="Embroidered Blouse"
-            data-price="999"
+            data-price="899"
             data-image="images/w2.jpg">
             Add to Cart
-        </button>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-        <img src="images/w3.jpg" alt="Scatter Star Jacket">
-        <h4>SCATTER STAR JACKET</h4>
-        <p>P659.00</p>
+    <!-- PRODUCT 3 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w3.jpg" class="card-img-top product-img" alt="Scatter Star Jacket">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">SCATTER STAR JACKET</h5>
+          <p class="card-text">P659.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="Scatter Star Jacket"
             data-price="659"
             data-image="images/w3.jpg">
             Add to Cart
-        </button>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-        <img src="images/w4.jpg" alt="Lace Detail Top">
-        <h4>LACE DETAIL TOP</h4>
-        <p>P999.00</p>
+    <!-- PRODUCT 4 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w4.jpg" class="card-img-top product-img" alt="Lace Detail Top">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">LACE DETAIL TOP</h5>
+          <p class="card-text">P799.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="Lace Detail Top"
-            data-price="999"
+            data-price="799"
             data-image="images/w4.jpg">
             Add to Cart
-        </button>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-        <img src="images/w5.jpg" alt="Western Shirt">
-        <h4>WESTERN SHIRT</h4>
-        <p>P999.00</p>
+    <!-- PRODUCT 5 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w5.jpg" class="card-img-top product-img" alt="Western Shirt">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">WESTERN SHIRT</h5>
+          <p class="card-text">P699.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="Women Western Shirt"
-            data-price="999"
+            data-price="699"
             data-image="images/w5.jpg">
             Add to Cart
-        </button>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-        <img src="images/w6.jpg" alt="High Waist Jeans">
-        <h4>HIGH WAIST JEANS</h4>
-        <p>P999.00</p>
+    <!-- PRODUCT 6 -->
+    <div class="col-md-4 col-sm-6">
+      <div class="card h-100 shadow-sm">
+        <img src="images/w6.jpg" class="card-img-top product-img" alt="High Waist Jeans">
 
-        <button 
+        <div class="card-body text-center">
+          <h5 class="card-title">HIGH WAIST JEANS</h5>
+          <p class="card-text">P899.00</p>
+
+          <button 
             class="btn btn-dark w-100 add-to-cart"
             data-name="High Waist Jeans"
-            data-price="999"
+            data-price="899"
             data-image="images/w6.jpg">
             Add to Cart
-        </button>
-    </div>
-
-</div>
-      
-        <div class="pagination">
-            1 2 3 →
+          </button>
         </div>
-
+      </div>
     </div>
 
-</div>
+  </div>
+</section>
 
-<!-- CONTACT -->
-<div class="contact">
-    <div>
-        <h4>CALL US</h4>
-        <p>+267 75171556</p>
-    </div>
-    <div>
-        <h4>EMAIL US</h4>
-        <p>lesleystud490@gmail.com</p>
-    </div>
-    <div>
-        <h4>VISIT US</h4>
-        <p>Gaborone, Botswana</p>
-    </div>
+<!-- FEATURES -->
+<div class="features">
+  <div>
+    <h4>FREE DELIVERY</h4>
+    <p>On orders over P999</p>
+  </div>
+
+  <div>
+    <h4>QUALITY MATERIAL</h4>
+    <p>Western-inspired clothing</p>
+  </div>
+
+  <div>
+    <h4>SECURE CHECKOUT</h4>
+    <p>Easy order process</p>
+  </div>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-    <div class="footer-content">
-        <div>
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="men.html">Men</a>
-            <a href="women.html">Women</a>
-        </div>
-
-        <div>
-            <h4>More</h4>
-            <a href="new-arrivals.html">New Arrivals</a>
-            <a href="sale.html">Sale</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div>
-            <h4>Follow Us</h4>
-            <p>Facebook | Instagram | TikTok</p>
-        </div>
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
     </div>
 
-    <div class="copyright">
-        © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+    <div>
+      <h4>More</h4>
+      <a href="new-arrival.html">New Arrivals</a>
+      <a href="sale.html">Sale</a>
+      <a href="contact.html">Contact</a>
     </div>
-</div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <p>Facebook | Instagram | TikTok</p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+  </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
