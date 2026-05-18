@@ -51,7 +51,9 @@ function displayCartItems() {
     if (!cartItemsContainer) return;
 
     cartItemsContainer.innerHTML = "";
-
+    if (checkoutBtn) {
+        checkoutBtn.classList.remove("disabled");
+    } 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = `
             <div class="alert alert-warning text-center">
