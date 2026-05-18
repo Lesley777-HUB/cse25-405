@@ -16,6 +16,7 @@
     <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
     <div>★ MADE FOR THE WESTERN SPIRIT</div>
 </div>
+
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -31,9 +32,10 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
         <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="new-arrivals.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
         <li class="nav-item">
           <a class="btn btn-dark position-relative" href="cart.html">
             🛒 Cart
@@ -44,15 +46,17 @@
     </div>
   </div>
 </nav>
+
 <!-- HERO -->
 <div class="hero">
-    <img src="images/women-hero.jpg" class="hero-img">
+    <img src="images/women-hero.jpg" class="hero-img" alt="Women Western Collection">
 
     <div class="hero-overlay">
         <h1>WOMEN</h1>
-        <p>Timeless western style for women.<br>
-        Crafted for confidence. Made to last.</p>
-        <button>SHOP NOW</button>
+        <p>Western-inspired fashion for bold women.<br>
+        Designed for confidence, comfort, and style.</p>
+
+        <a href="#women-products" class="hero-btn">SHOP NOW</a>
     </div>
 </div>
 
@@ -60,151 +64,245 @@
 <div class="main">
 
     <!-- SIDEBAR -->
-<div class="sidebar">
-    <h4>CATEGORIES</h4>
-    <ul class="filter-list">
-        <li><button class="filter-btn active" data-filter="all">All Women</button></li>
-        <li><button class="filter-btn" data-filter="top">Tops</button></li>
-        <li><button class="filter-btn" data-filter="shirt">Shirts</button></li>
-        <li><button class="filter-btn" data-filter="jacket">Jackets</button></li>
-        <li><button class="filter-btn" data-filter="jeans">Jeans</button></li>
-        <li><button class="filter-btn" data-filter="dress">Dresses</button></li>
-        <li><button class="filter-btn" data-filter="accessory">Accessories</button></li>
-    </ul>
+    <div class="sidebar">
+        <h4>CATEGORIES</h4>
+        <ul class="filter-list">
+            <li><button class="filter-btn active" data-filter="all">All Women</button></li>
+            <li><button class="filter-btn" data-filter="jacket">Jackets</button></li>
+            <li><button class="filter-btn" data-filter="top">Tops</button></li>
+            <li><button class="filter-btn" data-filter="shirt">Shirts</button></li>
+            <li><button class="filter-btn" data-filter="jeans">Jeans</button></li>
+            <li><button class="filter-btn" data-filter="dress">Dresses</button></li>
+            <li><button class="filter-btn" data-filter="accessory">Accessories</button></li>
+        </ul>
 
-    <br>
+        <br>
 
-    <h4>SIZE</h4>
-    <ul class="filter-list">
-        <li><button class="size-btn">XS</button></li>
-        <li><button class="size-btn">S</button></li>
-        <li><button class="size-btn">M</button></li>
-        <li><button class="size-btn">L</button></li>
-        <li><button class="size-btn">XL</button></li>
-    </ul>
+        <h4>AVAILABLE SIZES</h4>
+        <ul class="filter-list">
+            <li><button class="size-btn">XS</button></li>
+            <li><button class="size-btn">S</button></li>
+            <li><button class="size-btn">M</button></li>
+            <li><button class="size-btn">L</button></li>
+            <li><button class="size-btn">XL</button></li>
+        </ul>
 
-    <br>
+        <br>
 
-    <h4>COLOR</h4>
-    <ul class="filter-list">
-        <li><button class="color-btn">Black</button></li>
-        <li><button class="color-btn">Brown</button></li>
-        <li><button class="color-btn">Blue</button></li>
-    </ul>
-</div>
-    
-<!-- PRODUCTS -->
-<div class="products">
-
-    <div class="top-row">
-        <p>Showing 1–6 of 6 products</p>
-        <p>Sort by: Featured</p>
+        <h4>AVAILABLE COLORS</h4>
+        <ul class="filter-list">
+            <li><button class="color-btn">Black</button></li>
+            <li><button class="color-btn">Brown</button></li>
+            <li><button class="color-btn">Blue</button></li>
+        </ul>
     </div>
 
-    <div class="grid">
+    <!-- PRODUCTS -->
+    <div class="products" id="women-products">
 
-        <div class="card product-card" data-category="jacket">
-            <img src="images/w1.jpg" alt="Suede Fringe Jacket">
-            <h4>SUEDE FRINGE JACKET</h4>
-            <p>P999.00</p>
-
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="Suede Fringe Jacket"
-                data-price="999"
-                data-image="images/w1.jpg">
-                Add to Cart
-            </button>
+        <div class="top-row">
+            <p>Showing 1–12 of 12 products</p>
+            <p>Sort by: Featured</p>
         </div>
 
-        <div class="card product-card" data-category="top">
-            <img src="images/w2.jpg" alt="Embroidered Blouse">
-            <h4>EMBROIDERED BLOUSE</h4>
-            <p>P999.00</p>
+        <div class="grid">
 
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="Embroidered Blouse"
-                data-price="999"
-                data-image="images/w2.jpg">
-                Add to Cart
-            </button>
+            <!-- JACKETS -->
+            <div class="card product-card" data-category="jacket">
+                <img src="images/w1.jpg" alt="Suede Fringe Jacket">
+                <h4>SUEDE FRINGE JACKET</h4>
+                <p>P999.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Suede Fringe Jacket"
+                    data-price="999"
+                    data-image="images/w1.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="jacket">
+                <img src="images/w3.jpg" alt="Scatter Star Jacket">
+                <h4>SCATTER STAR JACKET</h4>
+                <p>P659.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Scatter Star Jacket"
+                    data-price="659"
+                    data-image="images/w3.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- TOPS -->
+            <div class="card product-card" data-category="top">
+                <img src="images/w2.jpg" alt="Embroidered Blouse">
+                <h4>EMBROIDERED BLOUSE</h4>
+                <p>P899.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Embroidered Blouse"
+                    data-price="899"
+                    data-image="images/w2.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="top">
+                <img src="images/w4.jpg" alt="Lace Detail Top">
+                <h4>LACE DETAIL TOP</h4>
+                <p>P799.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Lace Detail Top"
+                    data-price="799"
+                    data-image="images/w4.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- SHIRTS -->
+            <div class="card product-card" data-category="shirt">
+                <img src="images/w5.jpg" alt="Western Shirt">
+                <h4>WESTERN SHIRT</h4>
+                <p>P699.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Women Western Shirt"
+                    data-price="699"
+                    data-image="images/w5.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="shirt">
+                <img src="images/p7.jpg" alt="Western Snap Shirt">
+                <h4>WOMEN SNAP SHIRT</h4>
+                <p>P549.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Women Snap Shirt"
+                    data-price="549"
+                    data-image="images/p7.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- JEANS -->
+            <div class="card product-card" data-category="jeans">
+                <img src="images/w6.jpg" alt="High Waist Jeans">
+                <h4>HIGH WAIST JEANS</h4>
+                <p>P899.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="High Waist Jeans"
+                    data-price="899"
+                    data-image="images/w6.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="jeans">
+                <img src="images/p4.jpg" alt="Classic Blue Jeans">
+                <h4>CLASSIC BLUE JEANS</h4>
+                <p>P649.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Classic Blue Jeans"
+                    data-price="649"
+                    data-image="images/p4.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- DRESSES -->
+            <div class="card product-card" data-category="dress">
+                <img src="images/w7.jpg" alt="Western Denim Dress">
+                <h4>WESTERN DENIM DRESS</h4>
+                <p>P899.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Western Denim Dress"
+                    data-price="899"
+                    data-image="images/w7.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="dress">
+                <img src="images/w8.jpg" alt="Country Floral Dress">
+                <h4>COUNTRY FLORAL DRESS</h4>
+                <p>P749.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Country Floral Dress"
+                    data-price="749"
+                    data-image="images/w8.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- ACCESSORIES -->
+            <div class="card product-card" data-category="accessory">
+                <img src="images/p8.jpg" alt="Western Leather Belt">
+                <h4>WESTERN LEATHER BELT</h4>
+                <p>P399.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Western Leather Belt"
+                    data-price="399"
+                    data-image="images/p8.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="card product-card" data-category="accessory">
+                <img src="images/p2.jpg" alt="Women Cowboy Hat">
+                <h4>WOMEN COWBOY HAT</h4>
+                <p>P499.00</p>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Women Cowboy Hat"
+                    data-price="499"
+                    data-image="images/p2.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
         </div>
 
-        <div class="card product-card" data-category="jacket">
-            <img src="images/w3.jpg" alt="Scatter Star Jacket">
-            <h4>SCATTER STAR JACKET</h4>
-            <p>P659.00</p>
-
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="Scatter Star Jacket"
-                data-price="659"
-                data-image="images/w3.jpg">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="card product-card" data-category="top">
-            <img src="images/w4.jpg" alt="Lace Detail Top">
-            <h4>LACE DETAIL TOP</h4>
-            <p>P999.00</p>
-
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="Lace Detail Top"
-                data-price="999"
-                data-image="images/w4.jpg">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="card product-card" data-category="shirt">
-            <img src="images/w5.jpg" alt="Western Shirt">
-            <h4>WESTERN SHIRT</h4>
-            <p>P999.00</p>
-
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="Women Western Shirt"
-                data-price="999"
-                data-image="images/w5.jpg">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="card product-card" data-category="jeans">
-            <img src="images/w6.jpg" alt="High Waist Jeans">
-            <h4>HIGH WAIST JEANS</h4>
-            <p>P999.00</p>
-
-            <button 
-                class="btn btn-dark w-100 add-to-cart"
-                data-name="High Waist Jeans"
-                data-price="999"
-                data-image="images/w6.jpg">
-                Add to Cart
-            </button>
+        <div class="pagination">
+            Showing all products
         </div>
 
     </div>
 
-    <div class="pagination">
-        1 2 3 →
-    </div>
+</div>
 
-</div>
-</div>
 <!-- CONTACT -->
 <div class="contact">
     <div>
         <h4>CALL US</h4>
         <p>+267 75171556</p>
     </div>
+
     <div>
         <h4>EMAIL US</h4>
         <p>lesleystud490@gmail.com</p>
     </div>
+
     <div>
         <h4>VISIT US</h4>
         <p>Gaborone, Botswana</p>
@@ -223,7 +321,7 @@
 
         <div>
             <h4>More</h4>
-            <a href="new-arrivals.html">New Arrivals</a>
+            <a href="new-arrival.html">New Arrivals</a>
             <a href="sale.html">Sale</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -238,6 +336,7 @@
         © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 
