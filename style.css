@@ -588,16 +588,19 @@ strong {
 }
 /* SIDEBAR FILTER IMPROVEMENT */
 .sidebar {
+    width: 260px;
     background: #ffffff;
-    padding: 20px;
+    padding: 22px;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
     height: fit-content;
 }
 
 .sidebar h4 {
     font-family: 'Oswald', sans-serif;
     color: #3b2a1a;
+    font-size: 20px;
     margin-bottom: 12px;
     border-bottom: 2px solid #3b2a1a;
     padding-bottom: 6px;
@@ -606,24 +609,24 @@ strong {
 .filter-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .filter-list li {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
 .filter-btn,
 .size-btn,
 .color-btn {
     width: 100%;
-    border: 1px solid #ddd;
-    background: #f8f5f2;
+    border: 1px solid #c9b8a6;
+    background: #fff7ef;
     color: #2a1d12;
     text-align: left;
-    padding: 10px 12px;
+    padding: 11px 13px;
     font-family: 'Oswald', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
     border-radius: 6px;
