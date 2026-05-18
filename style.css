@@ -546,4 +546,42 @@ del {
 strong {
     color: #3b2a1a;
 }
+.filter-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.filter-list li {
+    margin-bottom: 8px;
+}
+
+.filter-btn,
+.size-btn,
+.color-btn {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 8px 10px;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.size-btn:hover,
+.color-btn:hover {
+    background: #3b2a1a;
+    color: white;
+    border-radius: 4px;
+}
+
+.filter-btn.active {
+    background: #3b2a1a;
+    color: white;
+    border-radius: 4px;
+}
+
+.product-card.hide {
+    display: none;
 }
