@@ -212,3 +212,25 @@ if (checkoutForm) {
 displayCartItems();
 displayCheckoutSummary();
 updateCartCount();
+/* WOMEN PAGE CATEGORY FILTER */
+const filterButtons = document.querySelectorAll(".filter-btn");
+const productCards = document.querySelectorAll(".product-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const filter = this.dataset.filter;
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        productCards.forEach(card => {
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+                card.classList.remove("hide");
+            } else {
+                card.classList.add("hide");
+            }
+        });
+    });
+});
