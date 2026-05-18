@@ -523,4 +523,27 @@ button {
 .card-title {
     font-family: 'Oswald', sans-serif;
 }
+    .cart-img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+}
+
+.card button,
+.category button {
+    margin-top: 10px;
+}
+
+del {
+    color: #777;
+    margin-right: 8px;
+}
+
+strong {
+    color: #3b2a1a;
+}
 }
