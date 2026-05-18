@@ -649,3 +649,19 @@ strong {
 .product-card.hide {
     display: none;
 }
+.hero-btn {
+    display: inline-block;
+    background: #3b2a1a;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #2a1d12;
+    color: white;
+}
