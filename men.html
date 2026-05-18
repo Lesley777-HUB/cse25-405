@@ -1,27 +1,28 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Men's Collection - Orthodox</title>
+
+<title>Men - Orthodox Cowboy Clothing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- TOP BAR -->
 <div class="top-bar">
-    <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
-    <div>★ MADE FOR THE WESTERN SPIRIT</div>
+  <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
+  <div>★ MADE FOR THE WESTERN SPIRIT</div>
 </div>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <a class="navbar-brand" href="index.html">
       <img src="images/logo.png" alt="Orthodox Logo" height="55">
     </a>
 
@@ -30,13 +31,14 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+      <ul class="navbar-nav ms-auto gap-lg-3">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link active" href="men.html">Men</a></li>
         <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="new-arrivals.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
         <li class="nav-item">
           <a class="btn btn-dark position-relative" href="cart.html">
             🛒 Cart
@@ -48,139 +50,157 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-    <img src="images/men-hero.jpg">
-    <div class="hero-overlay">
-        <h1>MEN’S<br>COLLECTION</h1>
-        <p>Rugged. Timeless. Authentic.<br>Western wear for the modern cowboy.</p>
-        <button>SHOP NOW</button>
-    </div>
-</div>
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <h1>MEN'S COLLECTION</h1>
+  <p>Western essentials made for everyday confidence.</p>
+</section>
 
-<!-- TITLE -->
-<div class="section-title">★ SHOP BY CATEGORY ★</div>
+<!-- PRODUCTS -->
+<div class="grid">
 
-<!-- CATEGORIES -->
-<div class="categories">
+  <div class="card">
+    <img src="images/boots.jpg" alt="Men Cowboy Boots">
+    <h4>MEN COWBOY BOOTS</h4>
+    <p>P999.00</p>
 
-    <div class="category">
-        <img src="images/boots.jpg" alt="Men Cowboy Boots">
-        <h3>BOOTS</h3>
-        <p>P999.00</p>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Men Cowboy Boots"
+      data-price="999"
+      data-image="images/boots.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-        <button 
-            class="btn btn-dark w-100 add-to-cart"
-            data-name="Men Cowboy Boots"
-            data-price="999"
-            data-image="images/boots.jpg">
-            Add to Cart
-        </button>
-    </div>
+  <div class="card">
+    <img src="images/hats.jpg" alt="Outlaw Cowboy Hat">
+    <h4>OUTLAW COWBOY HAT</h4>
+    <p>P799.00</p>
 
-    <div class="category">
-        <img src="images/hats.jpg" alt="Men Cowboy Hat">
-        <h3>HATS</h3>
-        <p>P499.00</p>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Outlaw Cowboy Hat"
+      data-price="799"
+      data-image="images/hats.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-        <button 
-            class="btn btn-dark w-100 add-to-cart"
-            data-name="Men Cowboy Hat"
-            data-price="499"
-            data-image="images/hats.jpg">
-            Add to Cart
-        </button>
-    </div>
+  <div class="card">
+    <img src="images/jackets.jpg" alt="Rancher Suede Jacket">
+    <h4>RANCHER SUEDE JACKET</h4>
+    <p>P1299.00</p>
 
-    <div class="category">
-        <img src="images/jackets.jpg" alt="Men Western Jacket">
-        <h3>JACKETS</h3>
-        <p>P899.00</p>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Rancher Suede Jacket"
+      data-price="1299"
+      data-image="images/jackets.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-        <button 
-            class="btn btn-dark w-100 add-to-cart"
-            data-name="Men Western Jacket"
-            data-price="899"
-            data-image="images/jackets.jpg">
-            Add to Cart
-        </button>
-    </div>
+  <div class="card">
+    <img src="images/men.jpg" alt="Classic Straight Jeans">
+    <h4>CLASSIC STRAIGHT JEANS</h4>
+    <p>P899.00</p>
 
-    <div class="category">
-        <video autoplay muted loop playsinline class="category-video">
-            <source src="videos/jeanscover.mp4" type="video/mp4">
-        </video>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Classic Straight Jeans"
+      data-price="899"
+      data-image="images/men.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-        <div class="card-text">
-            <h3>JEANS</h3>
-            <p>P599.00</p>
-        </div>
+  <div class="card">
+    <img src="images/p3.jpg" alt="Plaid Flannel Shirt">
+    <h4>PLAID FLANNEL SHIRT</h4>
+    <p>P699.00</p>
 
-        <button 
-            class="btn btn-dark w-100 add-to-cart"
-            data-name="Men Classic Jeans"
-            data-price="599"
-            data-image="images/men.jpg">
-            Add to Cart
-        </button>
-    </div>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Plaid Flannel Shirt"
+      data-price="699"
+      data-image="images/p3.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-</div>
-    
-<!-- FEATURES -->
-<div class="features">
-    <div>🚚 FREE DELIVERY<br><small>On orders over P999</small></div>
-    <div>🔒 SECURE PAYMENT<br><small>100% secure checkout</small></div>
-    <div>↩ EASY RETURNS<br><small>30-day return policy</small></div>
-</div>
+  <div class="card">
+    <img src="images/p8.jpg" alt="Leather Belt">
+    <h4>LEATHER BELT</h4>
+    <p>P499.00</p>
 
-<!-- CONTACT -->
-<div class="contact">
-    <div>
-        <h4>CALL US</h4>
-        <p>+267 75171556</p>
-    </div>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Leather Belt"
+      data-price="499"
+      data-image="images/p8.jpg">
+      Add to Cart
+    </button>
+  </div>
 
-    <div>
-        <h4>EMAIL US</h4>
-        <p>lesleystud490@gmail.com</p>
-    </div>
+  <div class="card">
+    <img src="images/p6.jpg" alt="Denim Sherpa Jacket">
+    <h4>DENIM SHERPA JACKET</h4>
+    <p>P1199.00</p>
 
-    <div>
-        <h4>VISIT US</h4>
-        <p>Gaborone, Botswana</p>
-    </div>
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Denim Sherpa Jacket"
+      data-price="1199"
+      data-image="images/p6.jpg">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="card">
+    <img src="images/p7.jpg" alt="Western Snap Shirt">
+    <h4>WESTERN SNAP SHIRT</h4>
+    <p>P649.00</p>
+
+    <button 
+      class="btn btn-dark add-to-cart"
+      data-name="Western Snap Shirt"
+      data-price="649"
+      data-image="images/p7.jpg">
+      Add to Cart
+    </button>
+  </div>
+
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-    <div class="footer-content">
-
-        <div>
-            <h4>Quick Links</h4>
-            <a href="#">Home</a>
-            <a href="men.html">Men</a>
-            <a href="women.html">Women</a>
-        </div>
-
-        <div>
-            <h4>More</h4>
-            <a href="new-arrivals.html">New Arrivals</a>
-            <a href="sale.html">Sale</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <div>
-            <h4>Follow Us</h4>
-            <p>Facebook | Instagram | TikTok</p>
-        </div>
-
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="men.html">Men</a>
+      <a href="women.html">Women</a>
     </div>
 
-    <div class="copyright">
-        © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+    <div>
+      <h4>More</h4>
+      <a href="new-arrival.html">New Arrivals</a>
+      <a href="sale.html">Sale</a>
+      <a href="contact.html">Contact</a>
     </div>
-</div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <p>Facebook | Instagram | TikTok</p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+  </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
