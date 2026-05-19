@@ -826,3 +826,11 @@ button:hover {
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
 }
+/* PRODUCT SIZE AND COLOR SELECTORS */
+.product-size,
+.product-color {
+    width: calc(100% - 24px);
+    margin: 0 auto 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
