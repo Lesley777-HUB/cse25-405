@@ -13,9 +13,10 @@
 <body>
 
 <div class="top-bar">
-<div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
-<div>★ MADE FOR THE WESTERN SPIRIT</div>
+    <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
+    <div>★ MADE FOR THE WESTERN SPIRIT</div>
 </div>
+
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -31,9 +32,10 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
         <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="new-arrivals.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="sale.html">Sale</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
         <li class="nav-item">
           <a class="btn btn-dark position-relative" href="cart.html">
             🛒 Cart
@@ -47,113 +49,156 @@
 
 <!-- HERO -->
 <div class="hero">
-    <img src="images/contact-hero.jpg" class="hero-img">
+    <img src="images/contact-hero.jpg" class="hero-img" alt="Contact Orthodox Cowboy Clothing">
 
     <div class="hero-overlay">
         <h1>CONTACT US</h1>
         <p>We’d love to hear from you.<br>
-        Get in touch with us for any questions,<br>
-        help or feedback.</p>
+        Get in touch with us for questions, help, or feedback.</p>
+
+        <a href="#contact-form" class="hero-btn">SEND MESSAGE</a>
     </div>
 </div>
+
 <!-- CONTACT -->
-<div class="contact-section">
+<div class="contact-section" id="contact-form">
 
-<div class="form-box">
-<h3>SEND US A MESSAGE</h3>
+    <div class="form-box">
+        <h3>SEND US A MESSAGE</h3>
 
-<div class="row">
-<input placeholder="First Name">
-<input placeholder="Last Name">
-</div>
+        <div id="form-alert" class="alert d-none" role="alert"></div>
 
-<input placeholder="Email Address">
-<input placeholder="Phone Number">
-<textarea rows="5" placeholder="Your Message"></textarea>
+        <form id="contactForm">
+            <div class="row">
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+            </div>
 
-<button>SEND MESSAGE</button>
-</div>
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
 
-<div class="info">
-<h3>GET IN TOUCH</h3>
+            <div class="contact-buttons">
+                <button type="submit">SEND MESSAGE</button>
+                <button type="button" id="clearFormBtn" class="clear-btn">CLEAR FORM</button>
+            </div>
+        </form>
+    </div>
 
-<div class="info-item">
-<strong>CALL US</strong><br>
-+267 75171556
-</div>
+    <div class="info">
+        <h3>GET IN TOUCH</h3>
 
-<div class="info-item">
-<strong>EMAIL US</strong><br>
-lesleystud490@gmail.com
-</div>
+        <div class="info-item">
+            <strong>CALL US</strong><br>
+            <a href="tel:+26775171556">+267 75171556</a>
+        </div>
 
-<div class="info-item">
-<strong>VISIT US</strong><br>
-Gaborone, Botswana
-</div>
+        <div class="info-item">
+            <strong>EMAIL US</strong><br>
+            <a href="mailto:lesleystud490@gmail.com">lesleystud490@gmail.com</a>
+        </div>
 
-<div class="info-item">
-<strong>HOURS</strong><br>
-Mon–Fri: 8:00–5:00<br>
-Sat: 9:00–1:00<br>
-Sun: Closed
-</div>
+        <div class="info-item">
+            <strong>VISIT US</strong><br>
+            Gaborone, Botswana
+        </div>
 
-</div>
+        <div class="info-item">
+            <strong>HOURS</strong><br>
+            Mon–Fri: 8:00–5:00<br>
+            Sat: 9:00–1:00<br>
+            Sun: Closed
+        </div>
+    </div>
 
-<div class="map">
-<img src="images/map.jpg">
-</div>
+    <div class="map">
+        <img src="images/map.jpg" alt="Map location">
+    </div>
 
 </div>
 
 <!-- FAQ -->
 <div class="faq">
-<h2>★ FREQUENTLY ASKED QUESTIONS ★</h2>
+    <h2>★ FREQUENTLY ASKED QUESTIONS ★</h2>
 
-<div class="faq-item">What are your delivery options? <span>+</span></div>
-<div class="faq-item">How long does delivery take? <span>+</span></div>
-<div class="faq-item">Can I return or exchange an item? <span>+</span></div>
-<div class="faq-item">How can I track my order? <span>+</span></div>
+    <div class="faq-item">
+        <button class="faq-question">
+            What are your delivery options?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            We offer standard delivery within Botswana. Orders over P999 qualify for free delivery.
+        </div>
+    </div>
 
+    <div class="faq-item">
+        <button class="faq-question">
+            How long does delivery take?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            Delivery usually takes 2–5 working days depending on your location.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            Can I return or exchange an item?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            Yes. Items can be returned or exchanged within 7 days if they are unused and in good condition.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            How can I track my order?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            After placing an order, you can contact us by phone or email with your order details.
+        </div>
+    </div>
 </div>
 
 <!-- CONTACT STRIP -->
 <div class="contact-strip">
-<div>📞 CALL US<br>+267 75171556</div>
-<div>✉ EMAIL US<br>lesleystud490@gmail.com</div>
-<div>📍 VISIT US<br>Gaborone, Botswana</div>
+    <div>📞 CALL US<br><a href="tel:+26775171556">+267 75171556</a></div>
+    <div>✉ EMAIL US<br><a href="mailto:lesleystud490@gmail.com">lesleystud490@gmail.com</a></div>
+    <div>📍 VISIT US<br>Gaborone, Botswana</div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-<div class="footer-content">
+    <div class="footer-content">
 
-<div>
-<h4>Quick Links</h4>
-<a href="index.html">Home</a>
-<a href="men.html">Men</a>
-<a href="women.html">Women</a>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+        </div>
+
+        <div>
+            <h4>More</h4>
+            <a href="new-arrival.html">New Arrivals</a>
+            <a href="sale.html">Sale</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <p>Facebook | Instagram | TikTok</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+    </div>
 </div>
 
-<div>
-<h4>More</h4>
-<a href="new-arrivals.html">New Arrivals</a>
-<a href="sale.html">Sale</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<div>
-<h4>Follow Us</h4>
-<p>Facebook | Instagram | TikTok</p>
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 Orthodox Cowboy Clothing. All Rights Reserved.
-</div>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
