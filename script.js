@@ -234,3 +234,83 @@ filterButtons.forEach(button => {
         });
     });
 });
+/* CONTACT PAGE FORM VALIDATION */
+const contactForm = document.getElementById("contactForm");
+const formAlert = document.getElementById("form-alert");
+const clearFormBtn = document.getElementById("clearFormBtn");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const message = document.getElementById("message");
+
+        let isValid = true;
+
+        const fields = [firstName, lastName, email, phone, message];
+
+        fields.forEach(field => {
+            field.classList.remove("error", "success");
+
+            if (field.value.trim() === "") {
+                field.classList.add("error");
+                isValid = false;
+            } else {
+                field.classList.add("success");
+            }
+        });
+
+        if (!email.value.includes("@") || !email.value.includes(".")) {
+            email.classList.add("error");
+            email.classList.remove("success");
+            isValid = false;
+        }
+
+        if (phone.value.trim().length < 7) {
+            phone.classList.add("error");
+            phone.classList.remove("success");
+            isValid = false;
+        }
+
+        if (isValid) {
+            formAlert.className = "alert alert-success";
+            formAlert.textContent = "Thank you! Your message has been sent successfully.";
+
+            contactForm.reset();
+
+            fields.forEach(field => {
+                field.classList.remove("error", "success");
+            });
+        } else {
+            formAlert.className = "alert alert-danger";
+            formAlert.textContent = "Please fill in all fields correctly before sending.";
+        }
+    });
+}
+
+if (clearFormBtn) {
+    clearFormBtn.addEventListener("click", function () {
+        contactForm.reset();
+
+        document.querySelectorAll(".form-box input, .form-box textarea").forEach(field => {
+            field.classList.remove("error", "success");
+        });
+
+        formAlert.className = "alert d-none";
+        formAlert.textContent = "";
+    });
+}
+
+/* FAQ ACCORDION */
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(question => {
+    question.addEventListener("click", function () {
+        const faqItem = this.parentElement;
+        faqItem.classList.toggle("active");
+    });
+});
