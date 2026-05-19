@@ -778,3 +778,43 @@ button:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+/* ABOUT SECTION */
+.about-section {
+    background: #fff;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content h2 {
+    font-family: 'Rye', cursive;
+    color: #3b2a1a;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-family: 'Oswald', sans-serif;
+    color: #444;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 40px 18px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+}
