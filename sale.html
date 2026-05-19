@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,4 +27,400 @@
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="women.html">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="new-arrival.html">New Arrivals</a></li>
+        <li class="nav-item"><a class="nav-link active" href="sale.html">Sale</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        <li class="nav-item">
+          <a class="btn btn-dark position-relative" href="cart.html">
+            🛒 Cart
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="images/save.jpg" class="hero-img" alt="Sale Collection">
+
+    <div class="hero-overlay">
+        <h1>SALE COLLECTION</h1>
+        <p>Western favourites at reduced prices. Grab your cowboy style for less.</p>
+        <a href="#sale-products" class="hero-btn">SHOP SALE</a>
+    </div>
+</div>
+
+<!-- MAIN PRODUCT AREA -->
+<div class="main" id="sale-products">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h4>Categories</h4>
+
+        <ul class="filter-list">
+            <li><button class="filter-btn active" data-filter="all">All Sale</button></li>
+            <li><button class="filter-btn" data-filter="boots">Boots</button></li>
+            <li><button class="filter-btn" data-filter="hat">Hats</button></li>
+            <li><button class="filter-btn" data-filter="jacket">Jackets</button></li>
+            <li><button class="filter-btn" data-filter="jeans">Jeans</button></li>
+            <li><button class="filter-btn" data-filter="shirt">Shirts</button></li>
+            <li><button class="filter-btn" data-filter="dress">Dresses</button></li>
+            <li><button class="filter-btn" data-filter="accessory">Accessories</button></li>
+        </ul>
+
+        <h4>Available Sizes</h4>
+        <ul class="filter-list">
+            <li><button class="size-btn">S</button></li>
+            <li><button class="size-btn">M</button></li>
+            <li><button class="size-btn">L</button></li>
+            <li><button class="size-btn">XL</button></li>
+        </ul>
+
+        <h4>Available Colors</h4>
+        <ul class="filter-list">
+            <li><button class="color-btn">Brown</button></li>
+            <li><button class="color-btn">Black</button></li>
+            <li><button class="color-btn">Tan</button></li>
+            <li><button class="color-btn">Beige</button></li>
+        </ul>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+        <div class="top-row">
+            <p>Showing all sale products</p>
+            <p>Sort by: Biggest Savings</p>
+        </div>
+
+        <div class="grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="card product-card" data-category="boots">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p1.jpg" alt="Classic Western Boots">
+                <h4>CLASSIC WESTERN BOOTS</h4>
+                <p class="product-desc">Durable western boots made for comfort and everyday style.</p>
+                <p>
+                    <span class="old-price">P999.00</span>
+                    <strong class="sale-price">P799.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Classic Western Boots"
+                    data-price="799"
+                    data-image="images/p1.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="card product-card" data-category="hat">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p2.jpg" alt="Outlaw Cowboy Hat">
+                <h4>OUTLAW COWBOY HAT</h4>
+                <p class="product-desc">Classic cowboy hat designed to complete your western look.</p>
+                <p>
+                    <span class="old-price">P699.00</span>
+                    <strong class="sale-price">P549.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Outlaw Cowboy Hat"
+                    data-price="549"
+                    data-image="images/p2.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="card product-card" data-category="jacket">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p3.jpg" alt="Ranch Leather Jacket">
+                <h4>RANCH LEATHER JACKET</h4>
+                <p class="product-desc">Stylish western jacket built for warmth, comfort, and confidence.</p>
+                <p>
+                    <span class="old-price">P1199.00</span>
+                    <strong class="sale-price">P999.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Black</option>
+                    <option>Brown</option>
+                    <option>Tan</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Ranch Leather Jacket"
+                    data-price="999"
+                    data-image="images/p3.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 4 -->
+            <div class="card product-card" data-category="jeans">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p4.jpg" alt="Rodeo Denim Jeans">
+                <h4>RODEO DENIM JEANS</h4>
+                <p class="product-desc">Classic denim jeans made for strength, comfort, and daily wear.</p>
+                <p>
+                    <span class="old-price">P499.00</span>
+                    <strong class="sale-price">P399.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Blue</option>
+                    <option>Black</option>
+                    <option>Grey</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Rodeo Denim Jeans"
+                    data-price="399"
+                    data-image="images/p4.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="card product-card" data-category="shirt">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p5.jpg" alt="Western Check Shirt">
+                <h4>WESTERN CHECK SHIRT</h4>
+                <p class="product-desc">Comfortable western shirt with a bold cowboy-inspired finish.</p>
+                <p>
+                    <span class="old-price">P349.00</span>
+                    <strong class="sale-price">P279.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Brown</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Western Check Shirt"
+                    data-price="279"
+                    data-image="images/p5.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="card product-card" data-category="dress">
+                <span class="sale-badge">SALE</span>
+                <img src="images/w5.jpg" alt="Prairie Western Dress">
+                <h4>PRAIRIE WESTERN DRESS</h4>
+                <p class="product-desc">Elegant western dress designed for confidence and casual style.</p>
+                <p>
+                    <span class="old-price">P699.00</span>
+                    <strong class="sale-price">P599.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Beige</option>
+                    <option>Pink</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Prairie Western Dress"
+                    data-price="599"
+                    data-image="images/w5.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 7 -->
+            <div class="card product-card" data-category="accessory">
+                <span class="sale-badge">SALE</span>
+                <img src="images/p6.jpg" alt="Cowboy Belt">
+                <h4>COWBOY BELT</h4>
+                <p class="product-desc">Western accessory made to add detail and character to your outfit.</p>
+                <p>
+                    <span class="old-price">P249.00</span>
+                    <strong class="sale-price">P199.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Cowboy Belt"
+                    data-price="199"
+                    data-image="images/p6.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 8 -->
+            <div class="card product-card" data-category="boots">
+                <span class="sale-badge">SALE</span>
+                <img src="images/w8.jpg" alt="Cowgirl Trail Boots">
+                <h4>COWGIRL TRAIL BOOTS</h4>
+                <p class="product-desc">Premium cowgirl boots designed for comfort and western charm.</p>
+                <p>
+                    <span class="old-price">P999.00</span>
+                    <strong class="sale-price">P849.00</strong>
+                </p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Beige</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Cowgirl Trail Boots"
+                    data-price="849"
+                    data-image="images/w8.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-content">
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+        </div>
+
+        <div>
+            <h4>More</h4>
+            <a href="new-arrival.html">New Arrivals</a>
+            <a href="sale.html">Sale</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="socials">
+            <h4>Follow Us</h4>
+            <p>Facebook | Instagram | TikTok | Email</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Orthodox Cowboy Clothing. All Rights Reserved.
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
