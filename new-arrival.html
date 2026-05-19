@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Arrivals - Orthodox</title>
+
+<title>New Arrivals - Orthodox Cowboy Clothing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,18 +13,20 @@
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div>🚚 FREE DELIVERY ON ORDERS OVER P999</div>
     <div>★ MADE FOR THE WESTERN SPIRIT</div>
 </div>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img src="images/logo.png" alt="Orthodox Logo" height="55">
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -49,98 +52,111 @@
 
 <!-- HERO -->
 <div class="hero">
-    <img src="images/new-hero.jpg" class="hero-img" alt="New Arrivals Collection">
+    <img src="images/new.jpg" class="hero-img" alt="New Arrivals Collection">
 
     <div class="hero-overlay">
         <h1>NEW ARRIVALS</h1>
-        <p>Be the first to explore our latest drops.<br>
-        Fresh styles. Authentic western spirit.</p>
-
-        <a href="#new-products" class="hero-btn">SHOP NOW</a>
+        <p>Fresh western styles just added to the Orthodox Cowboy Clothing collection.</p>
+        <a href="#new-products" class="hero-btn">SHOP NEW</a>
     </div>
 </div>
 
-<!-- MAIN -->
-<div class="main">
+<!-- MAIN PRODUCT AREA -->
+<div class="main" id="new-products">
 
     <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h4>CATEGORIES</h4>
+    <aside class="sidebar">
+        <h4>Categories</h4>
+
         <ul class="filter-list">
-            <li><button class="filter-btn active" data-filter="all">All New</button></li>
-            <li><button class="filter-btn" data-filter="jacket">Jackets</button></li>
-            <li><button class="filter-btn" data-filter="hat">Hats</button></li>
-            <li><button class="filter-btn" data-filter="shirt">Shirts</button></li>
-            <li><button class="filter-btn" data-filter="jeans">Jeans</button></li>
+            <li><button class="filter-btn active" data-filter="all">All New Arrivals</button></li>
             <li><button class="filter-btn" data-filter="boots">Boots</button></li>
+            <li><button class="filter-btn" data-filter="hat">Hats</button></li>
+            <li><button class="filter-btn" data-filter="jacket">Jackets</button></li>
+            <li><button class="filter-btn" data-filter="jeans">Jeans</button></li>
+            <li><button class="filter-btn" data-filter="shirt">Shirts</button></li>
+            <li><button class="filter-btn" data-filter="dress">Dresses</button></li>
             <li><button class="filter-btn" data-filter="accessory">Accessories</button></li>
         </ul>
 
-        <br>
-
-        <h4>AVAILABLE SIZES</h4>
+        <h4>Available Sizes</h4>
         <ul class="filter-list">
-            <li><button class="size-btn">XS</button></li>
             <li><button class="size-btn">S</button></li>
             <li><button class="size-btn">M</button></li>
             <li><button class="size-btn">L</button></li>
             <li><button class="size-btn">XL</button></li>
         </ul>
 
-        <br>
-
-        <h4>AVAILABLE COLORS</h4>
+        <h4>Available Colors</h4>
         <ul class="filter-list">
-            <li><button class="color-btn">Black</button></li>
             <li><button class="color-btn">Brown</button></li>
-            <li><button class="color-btn">Blue</button></li>
+            <li><button class="color-btn">Black</button></li>
+            <li><button class="color-btn">Tan</button></li>
+            <li><button class="color-btn">Beige</button></li>
         </ul>
-    </div>
+    </aside>
 
     <!-- PRODUCTS -->
-    <div class="products" id="new-products">
-
+    <section class="products">
         <div class="top-row">
-            <p>Showing 1–12 of 12 products</p>
+            <p>Showing all new arrivals</p>
             <p>Sort by: Newest First</p>
         </div>
 
         <div class="grid">
 
-            <!-- JACKETS -->
-            <div class="card product-card" data-category="jacket">
-                <img src="images/p1.jpg" alt="Rancher Suede Jacket">
-                <h4>RANCHER SUEDE JACKET</h4>
-                <p>P999.00</p>
+            <!-- PRODUCT 1 -->
+            <div class="card product-card" data-category="boots">
+                <img src="images/p1.jpg" alt="Classic Western Boots">
+                <h4>CLASSIC WESTERN BOOTS</h4>
+                <p class="product-desc">Fresh western boots made for comfort, durability, and bold style.</p>
+                <p><strong>P899.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
-                    data-name="Rancher Suede Jacket"
-                    data-price="999"
+                    data-name="Classic Western Boots"
+                    data-price="899"
                     data-image="images/p1.jpg">
                     Add to Cart
                 </button>
             </div>
 
-            <div class="card product-card" data-category="jacket">
-                <img src="images/p6.jpg" alt="Denim Sherpa Jacket">
-                <h4>DENIM SHERPA JACKET</h4>
-                <p>P699.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Denim Sherpa Jacket"
-                    data-price="699"
-                    data-image="images/p6.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- HATS -->
+            <!-- PRODUCT 2 -->
             <div class="card product-card" data-category="hat">
                 <img src="images/p2.jpg" alt="Outlaw Cowboy Hat">
                 <h4>OUTLAW COWBOY HAT</h4>
-                <p>P699.00</p>
+                <p class="product-desc">A newly added cowboy hat designed to complete your western look.</p>
+                <p><strong>P699.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
@@ -151,167 +167,201 @@
                 </button>
             </div>
 
-            <div class="card product-card" data-category="hat">
-                <img src="images/hats.jpg" alt="Classic Cowboy Hat">
-                <h4>CLASSIC COWBOY HAT</h4>
-                <p>P499.00</p>
+            <!-- PRODUCT 3 -->
+            <div class="card product-card" data-category="jacket">
+                <img src="images/p3.jpg" alt="Ranch Leather Jacket">
+                <h4>RANCH LEATHER JACKET</h4>
+                <p class="product-desc">A stylish new western jacket built for warmth and confidence.</p>
+                <p><strong>P1199.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Black</option>
+                    <option>Brown</option>
+                    <option>Tan</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
-                    data-name="Classic Cowboy Hat"
-                    data-price="499"
-                    data-image="images/hats.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- SHIRTS -->
-            <div class="card product-card" data-category="shirt">
-                <img src="images/p3.jpg" alt="Plaid Flannel Shirt">
-                <h4>PLAID FLANNEL SHIRT</h4>
-                <p>P599.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Plaid Flannel Shirt"
-                    data-price="599"
+                    data-name="Ranch Leather Jacket"
+                    data-price="1199"
                     data-image="images/p3.jpg">
                     Add to Cart
                 </button>
             </div>
 
-            <div class="card product-card" data-category="shirt">
-                <img src="images/p7.jpg" alt="Western Snap Shirt">
-                <h4>WESTERN SNAP SHIRT</h4>
-                <p>P549.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Western Snap Shirt"
-                    data-price="549"
-                    data-image="images/p7.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- JEANS -->
+            <!-- PRODUCT 4 -->
             <div class="card product-card" data-category="jeans">
-                <img src="images/p4.jpg" alt="Classic Straight Jeans">
-                <h4>CLASSIC STRAIGHT JEANS</h4>
-                <p>P649.00</p>
+                <img src="images/p4.jpg" alt="Rodeo Denim Jeans">
+                <h4>RODEO DENIM JEANS</h4>
+                <p class="product-desc">New denim jeans made for strength, comfort, and everyday western wear.</p>
+                <p><strong>P499.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Blue</option>
+                    <option>Black</option>
+                    <option>Grey</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
-                    data-name="Classic Straight Jeans"
-                    data-price="649"
+                    data-name="Rodeo Denim Jeans"
+                    data-price="499"
                     data-image="images/p4.jpg">
                     Add to Cart
                 </button>
             </div>
 
-            <div class="card product-card" data-category="jeans">
-                <img src="images/men.jpg" alt="Men Classic Jeans">
-                <h4>MEN CLASSIC JEANS</h4>
-                <p>P599.00</p>
+            <!-- PRODUCT 5 -->
+            <div class="card product-card" data-category="shirt">
+                <img src="images/p5.jpg" alt="Western Check Shirt">
+                <h4>WESTERN CHECK SHIRT</h4>
+                <p class="product-desc">A fresh western shirt with a bold cowboy-inspired finish.</p>
+                <p><strong>P349.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Brown</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
-                    data-name="Men Classic Jeans"
-                    data-price="599"
-                    data-image="images/men.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- BOOTS -->
-            <div class="card product-card" data-category="boots">
-                <img src="images/p5.jpg" alt="Heritage Leather Boots">
-                <h4>HERITAGE LEATHER BOOTS</h4>
-                <p>P799.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Heritage Leather Boots"
-                    data-price="799"
+                    data-name="Western Check Shirt"
+                    data-price="349"
                     data-image="images/p5.jpg">
                     Add to Cart
                 </button>
             </div>
 
+            <!-- PRODUCT 6 -->
+            <div class="card product-card" data-category="dress">
+                <img src="images/w5.jpg" alt="Prairie Western Dress">
+                <h4>PRAIRIE WESTERN DRESS</h4>
+                <p class="product-desc">A newly added western dress designed for elegance and confidence.</p>
+                <p><strong>P699.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Beige</option>
+                    <option>Pink</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Prairie Western Dress"
+                    data-price="699"
+                    data-image="images/w5.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 7 -->
+            <div class="card product-card" data-category="accessory">
+                <img src="images/p6.jpg" alt="Cowboy Belt">
+                <h4>COWBOY BELT</h4>
+                <p class="product-desc">A fresh western accessory made to add detail and character.</p>
+                <p><strong>P249.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Tan</option>
+                </select>
+
+                <button 
+                    class="btn btn-dark w-100 add-to-cart"
+                    data-name="Cowboy Belt"
+                    data-price="249"
+                    data-image="images/p6.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- PRODUCT 8 -->
             <div class="card product-card" data-category="boots">
-                <img src="images/boots.jpg" alt="Men Cowboy Boots">
-                <h4>MEN COWBOY BOOTS</h4>
-                <p>P999.00</p>
+                <img src="images/w8.jpg" alt="Cowgirl Trail Boots">
+                <h4>COWGIRL TRAIL BOOTS</h4>
+                <p class="product-desc">New premium cowgirl boots designed for comfort and western charm.</p>
+                <p><strong>P999.00</strong></p>
+
+                <select class="form-select product-size mb-2">
+                    <option value="">Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <select class="form-select product-color mb-2">
+                    <option value="">Select Color</option>
+                    <option>Brown</option>
+                    <option>Black</option>
+                    <option>Beige</option>
+                </select>
 
                 <button 
                     class="btn btn-dark w-100 add-to-cart"
-                    data-name="Men Cowboy Boots"
+                    data-name="Cowgirl Trail Boots"
                     data-price="999"
-                    data-image="images/boots.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- ACCESSORIES -->
-            <div class="card product-card" data-category="accessory">
-                <img src="images/p8.jpg" alt="Leather Belt">
-                <h4>LEATHER BELT</h4>
-                <p>P399.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Leather Belt"
-                    data-price="399"
-                    data-image="images/p8.jpg">
-                    Add to Cart
-                </button>
-            </div>
-
-            <div class="card product-card" data-category="accessory">
-                <img src="images/w2.jpg" alt="Embroidered Blouse">
-                <h4>EMBROIDERED BLOUSE</h4>
-                <p>P899.00</p>
-
-                <button 
-                    class="btn btn-dark w-100 add-to-cart"
-                    data-name="Embroidered Blouse"
-                    data-price="899"
-                    data-image="images/w2.jpg">
+                    data-image="images/w8.jpg">
                     Add to Cart
                 </button>
             </div>
 
         </div>
+    </section>
 
-        <div class="pagination">
-            Showing all products
-        </div>
-
-    </div>
-
-</div>
-
-<!-- CONTACT -->
-<div class="contact">
-    <div>
-        <h4>CALL US</h4>
-        <p>+267 75171556</p>
-    </div>
-
-    <div>
-        <h4>EMAIL US</h4>
-        <p>lesleystud490@gmail.com</p>
-    </div>
-
-    <div>
-        <h4>VISIT US</h4>
-        <p>Gaborone, Botswana</p>
-    </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
     <div class="footer-content">
+
         <div>
             <h4>Quick Links</h4>
             <a href="index.html">Home</a>
@@ -326,10 +376,11 @@
             <a href="contact.html">Contact</a>
         </div>
 
-        <div>
+        <div class="socials">
             <h4>Follow Us</h4>
-            <p>Facebook | Instagram | TikTok</p>
+            <p>Facebook | Instagram | TikTok | Email</p>
         </div>
+
     </div>
 
     <div class="copyright">
@@ -339,6 +390,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
