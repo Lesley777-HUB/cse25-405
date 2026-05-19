@@ -314,3 +314,133 @@ faqQuestions.forEach(question => {
         faqItem.classList.toggle("active");
     });
 });
+/* CHECKOUT PAGE */
+const checkoutItems = document.getElementById("checkout-items");
+const checkoutSubtotal = document.getElementById("checkout-subtotal");
+const checkoutDelivery = document.getElementById("checkout-delivery");
+const checkoutTotal = document.getElementById("checkout-total");
+const checkoutForm = document.getElementById("checkoutForm");
+const checkoutAlert = document.getElementById("checkout-alert");
+
+function displayCheckoutItems() {
+    if (!checkoutItems) return;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    checkoutItems.innerHTML = "";
+
+    if (cart.length === 0) {
+        checkoutItems.innerHTML = `
+            <p class="text-muted">Your cart is empty.</p>
+            <a href="men.html" class="btn btn-dark w-100">Continue Shopping</a>
+        `;
+
+        if (checkoutSubtotal) checkoutSubtotal.textContent = "0.00";
+        if (checkoutDelivery) checkoutDelivery.textContent = "P0.00";
+        if (checkoutTotal) checkoutTotal.textContent = "0.00";
+        return;
+    }
+
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        let quantity = item.quantity || 1;
+        let price = Number(item.price);
+        subtotal += price * quantity;
+
+        checkoutItems.innerHTML += `
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div>
+                    <strong>${item.name}</strong><br>
+                    <small>P${price.toFixed(2)} x ${quantity}</small>
+                </div>
+                <strong>P${(price * quantity).toFixed(2)}</strong>
+            </div>
+        `;
+    });
+
+    let delivery = subtotal >= 999 ? 0 : 60;
+    let total = subtotal + delivery;
+
+    checkoutSubtotal.textContent = subtotal.toFixed(2);
+    checkoutDelivery.textContent = delivery === 0 ? "FREE" : "P" + delivery.toFixed(2);
+    checkoutTotal.textContent = total.toFixed(2);
+}
+
+displayCheckoutItems();
+
+if (checkoutForm) {
+    checkoutForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+            checkoutAlert.className = "alert alert-danger";
+            checkoutAlert.textContent = "Your cart is empty. Please add products before placing an order.";
+            return;
+        }
+
+        const requiredFields = [
+            document.getElementById("checkoutFirstName"),
+            document.getElementById("checkoutLastName"),
+            document.getElementById("checkoutEmail"),
+            document.getElementById("checkoutPhone"),
+            document.getElementById("checkoutAddress"),
+            document.getElementById("checkoutCity"),
+            document.getElementById("paymentMethod")
+        ];
+
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            field.classList.remove("is-invalid", "is-valid");
+
+            if (field.value.trim() === "") {
+                field.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                field.classList.add("is-valid");
+            }
+        });
+
+        const email = document.getElementById("checkoutEmail");
+        const phone = document.getElementById("checkoutPhone");
+
+        if (!email.value.includes("@") || !email.value.includes(".")) {
+            email.classList.add("is-invalid");
+            email.classList.remove("is-valid");
+            isValid = false;
+        }
+
+        if (phone.value.trim().length < 7) {
+            phone.classList.add("is-invalid");
+            phone.classList.remove("is-valid");
+            isValid = false;
+        }
+
+        if (!isValid) {
+            checkoutAlert.className = "alert alert-danger";
+            checkoutAlert.textContent = "Please fill in all required checkout details correctly.";
+            return;
+        }
+
+        checkoutAlert.className = "alert alert-success";
+        checkoutAlert.innerHTML = `
+            Order placed successfully! Thank you for shopping with Orthodox Cowboy Clothing.
+            <br>Your payment method: <strong>${document.getElementById("paymentMethod").value}</strong>
+        `;
+
+        localStorage.removeItem("cart");
+        checkoutForm.reset();
+
+        requiredFields.forEach(field => {
+            field.classList.remove("is-valid", "is-invalid");
+        });
+
+        displayCheckoutItems();
+
+        if (typeof updateCartCount === "function") {
+            updateCartCount();
+        }
+    });
+}
