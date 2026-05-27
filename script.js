@@ -1,6 +1,6 @@
-/* ================================
+/* 
    CART SYSTEM
-================================ */
+ */
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -55,9 +55,9 @@ addToCartButtons.forEach(button => {
 updateCartCount();
 
 
-/* ================================
+/* 
    CART PAGE DISPLAY
-================================ */
+ */
 
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
